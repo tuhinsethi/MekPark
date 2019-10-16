@@ -16,6 +16,8 @@ public class account_login extends AppCompatActivity {
 
     public void onLogin(View view){
 
+        Intent i = new Intent(account_login.this,profile.class);
+        startActivity(i);
 
 
     }

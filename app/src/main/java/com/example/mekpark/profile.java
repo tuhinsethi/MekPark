@@ -1,5 +1,6 @@
 package com.example.mekpark;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,6 +17,12 @@ public class profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+    }
+
+    public void onReturn(View v){
+        Intent i = new Intent(profile.this,account_login.class);
+        startActivity(i);
 
     }
 

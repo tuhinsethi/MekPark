@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+    public void onProfile(View v){
+
+
+        Intent i = new Intent(MainActivity.this,profile.class);
+        startActivity(i);
+    }
 }
