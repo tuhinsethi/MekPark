@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MekPark</string>
+    <string name="title_activity_nill">nill</string>
+    <string name="title_activity_profile">profile</string>
+</resources>

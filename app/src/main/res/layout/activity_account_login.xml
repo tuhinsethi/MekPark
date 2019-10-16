@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account_login"
+    android:orientation="vertical"
+
+
+
+
+
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleY="2.5"
+        android:scaleX="2"
+        android:src="@drawable/asset_2hdpi"/>
+
+    <LinearLayout
+
+
+
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="16sp"
+            android:layout_height="16sp"
+            android:src="@drawable/three_dots"
+            android:layout_gravity="right"/>
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Better Service "
+            android:layout_marginBottom="5dp"
+
+            android:fontFamily="@font/mont_bold"
+            android:textColor="@color/red_button"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy Customers"
+            android:textSize="20sp"
+            android:fontFamily="@font/mont_bold"
+            android:textColor="@color/red_button"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+
+            android:textColor="@color/dark_grey_button"
+            android:paddingTop="20dp"
+            android:fontFamily="@font/gotham_book"
+            android:text="Lorem Ipsum is simply dummy text of typesetting and printing industry"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:background="@color/home_background"
+
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:layout_marginTop="2dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/gotham_med"
+                android:textColor="@color/black"/>
+            <TextView android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/dark_grey_button"
+                android:fontFamily="@font/mont_med"
+                android:text="Login to enjoy hastle free and full access of odur services"/>
+
+            <Button
+
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Login"
+                android:fontFamily="@font/mont_med"
+                android:textAllCaps="false"
+                android:background="@drawable/button_edges"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/home_background">
+
+                <ImageView
+                    android:src="@drawable/question_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    />
+
+                <TextView
+                    android:textColor="@color/black2"
+                    android:textSize="16sp"
+                    android:text="FAQs"
+                    android:fontFamily="@font/mont_semibold"
+                    android:layout_marginLeft="16dp"
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"/>
+                <ImageView
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/arrow_icon"
+                    android:layout_marginLeft="178dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_height="1dp"
+                android:background="#c1cdc1"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+
+
+            </View>
+
+
+            <LinearLayout
+
+
+                android:background="@color/home_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/message_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+
+                    android:textColor="@color/black2"
+                    android:text="Send feedback"
+                    android:fontFamily="@font/mont_semibold"
+                    android:layout_marginLeft="16dp"/>
+                <ImageView
+                    android:src="@drawable/arrow_icon"
+                    android:layout_marginLeft="100dp"
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
