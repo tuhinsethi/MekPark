@@ -13,7 +13,7 @@
             android:name=".profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/NoActionBar"></activity>
-        <activity android:name=".account_login" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

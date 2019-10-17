@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:fontFamily="@font/got_med"
+        android:textColor="@color/light_black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP sent to 95354666699"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mont_reg"
+        android:textSize="12sp"
+        android:paddingLeft="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Enter OTP" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Enter OTP"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/home_background"
+        android:fontFamily="@font/mont_med"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp" />
+
+</LinearLayout>

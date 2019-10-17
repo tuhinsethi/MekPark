@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home_background"
+    android:layout_marginTop="90dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:fontFamily="@font/got_med"
+        android:textColor="@color/light_black"
+        android:id="@+id/signup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new account with MekPark"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mont_reg"
+        android:textSize="12sp"
+        android:paddingLeft="16dp"
+        android:layout_below="@id/signup" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="10 digit mobile number"
+                android:textSize="16sp"
+
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/greytick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="e-mail id (optional)"
+
+                android:textSize="16sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/greytick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="Name"
+                android:textSize="16sp"
+
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/greytick" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="70dp"
+        android:text="I have a referral code"
+        android:fontFamily="@font/gotham_book" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/terms"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="10sp"
+        android:layout_marginTop="15dp"
+        android:autoLink="web"
+        android:fontFamily="@font/mont_reg" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="Sign Up"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/home_background"
+        android:fontFamily="@font/mont_med"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp" />
+
+</LinearLayout>

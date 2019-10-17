@@ -2,4 +2,8 @@
     <string name="app_name">MekPark</string>
     <string name="title_activity_nill">nill</string>
     <string name="title_activity_profile">profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="terms">By creating an account I accept the <a href="">Terms &amp; Conditions</a></string>
+
 </resources>
