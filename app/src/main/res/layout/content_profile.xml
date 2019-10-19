@@ -152,11 +152,12 @@
                        android:paddingLeft="10dp"/>
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
                        android:layout_gravity="center"
+                       app:srcCompat="@drawable/greytick"
 
                        />
                </LinearLayout>
@@ -210,10 +211,11 @@
                        android:paddingLeft="10dp"/>
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
+                       app:srcCompat="@drawable/greytick"
                        android:layout_gravity="center"
 
 
@@ -267,16 +269,16 @@
                        android:fontFamily="@font/mont_semibold"
                        android:text="myemail123@id.com"
                        android:textColor="@color/black"
-                       android:textSize="14sp"
-                       android:drawableRight="" />
+                       android:textSize="14sp" />
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
 
 
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
+                       app:srcCompat="@drawable/greytick"
                        android:layout_gravity="center"
 
 
@@ -328,10 +330,12 @@
 
                        android:layout_height="16dp"
                        android:src="@drawable/attach_icon"/>
-                   <ImageView
+
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greentick"
+
+                       app:srcCompat="@drawable/greentick"
                        android:layout_gravity="center" />
 
 

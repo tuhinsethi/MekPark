@@ -32,10 +32,12 @@
         android:id="@+id/replace"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        android:layout_marginTop="140dp"
         >
 
         <include layout="@layout/fragment_login" />
+
+
     </FrameLayout>
 
 
