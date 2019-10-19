@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".page_a"></activity>
+        <activity android:name=".feedback" />
+        <activity android:name=".completion" />
+        <activity android:name=".reciept" />
         <activity
             android:name=".profile"
             android:label="@string/title_activity_profile"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity android:name=".account_login" />
         <activity android:name=".MainActivity">
             <intent-filter>

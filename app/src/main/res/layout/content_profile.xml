@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".profile"
     android:background="@color/white"
-    tools:showIn="@layout/activity_profile">
+    >
 
    <ScrollView
        android:layout_width="match_parent"

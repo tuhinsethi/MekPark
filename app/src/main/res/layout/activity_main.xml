@@ -21,4 +21,21 @@
         android:text="profile"
         android:onClick="onProfile"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reciept"
+        android:onClick="onReciept"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="completion"
+        android:onClick="onComplete"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="feedback"
+        android:onClick="onFeedback"/>
 </LinearLayout>
