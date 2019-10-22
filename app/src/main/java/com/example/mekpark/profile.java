@@ -2,14 +2,9 @@ package com.example.mekpark;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
 
 public class profile extends AppCompatActivity {
 
@@ -21,7 +16,7 @@ public class profile extends AppCompatActivity {
     }
 
     public void onReturn(View v){
-        Intent i = new Intent(profile.this,account_login.class);
+        Intent i = new Intent(profile.this, LoginActivity.class);
         startActivity(i);
 
     }

@@ -134,12 +134,13 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
                    <ImageView
-
+                       android:layout_gravity="center"
                        android:layout_width="18dp"
                        android:layout_height="18dp"
                        android:src="@drawable/profile_dummy"/>
 
-                   <TextView
+
+                   <EditText
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textColor="@color/black"
@@ -154,7 +155,8 @@
                    <ImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greentick"
+                       android:src="@drawable/greytick"
+                       android:layout_gravity="center"
 
                        />
                </LinearLayout>
@@ -193,9 +195,10 @@
                        android:layout_marginTop="2dp"
                        android:layout_width="18dp"
                        android:layout_height="18dp"
-                       android:src="@drawable/mobile_icon"/>
+                       android:src="@drawable/mobile_icon"
+                       android:layout_gravity="center" />
 
-                   <TextView
+                   <EditText
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textColor="@color/black"
@@ -211,6 +214,7 @@
                        android:layout_width="16dp"
                        android:layout_height="16dp"
                        android:src="@drawable/greytick"
+                       android:layout_gravity="center"
 
 
                        />
@@ -250,9 +254,11 @@
                        android:layout_marginTop="2dp"
                        android:layout_width="18dp"
                        android:layout_height="18dp"
-                       android:src="@drawable/email_icon"/>
+                       android:src="@drawable/email_icon"
+                       android:layout_gravity="center" />
 
-                   <TextView
+
+                   <EditText
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:paddingLeft="10dp"
@@ -261,15 +267,17 @@
                        android:fontFamily="@font/mont_semibold"
                        android:text="myemail123@id.com"
                        android:textColor="@color/black"
-                       android:textSize="14sp" />
+                       android:textSize="14sp"
+                       android:drawableRight="" />
 
 
                    <ImageView
 
+
                        android:layout_width="16dp"
                        android:layout_height="16dp"
                        android:src="@drawable/greytick"
-
+                       android:layout_gravity="center"
 
 
                        />
@@ -302,7 +310,8 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    >
-                   <TextView
+
+                   <EditText
                        android:layout_marginTop="3dp"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -315,14 +324,15 @@
                        android:layout_marginLeft="90dp"
                        android:layout_width="14dp"
                        android:layout_weight="1"
-
+                       android:layout_gravity="center"
 
                        android:layout_height="16dp"
                        android:src="@drawable/attach_icon"/>
                    <ImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greentick"/>
+                       android:src="@drawable/greentick"
+                       android:layout_gravity="center" />
 
 
 
@@ -406,18 +416,18 @@
                android:layout_marginTop="90dp"
                android:padding="10dp"
                android:layout_width="match_parent"
-               android:background="@drawable/button_box"
+
                android:layout_height="wrap_content">
 
                <Button
 
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
+                   android:layout_height="40dp"
                    android:text="Done"
                    android:textAllCaps="false"
                    android:fontFamily="@font/mont_med"
                    android:textColor="@color/white"
-                   android:background="@drawable/button_edges"
+                   android:background="@drawable/button_bg"
                    />
 
            </FrameLayout>
