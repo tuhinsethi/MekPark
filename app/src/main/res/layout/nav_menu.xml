@@ -117,7 +117,7 @@
         android:layout_marginBottom="8dp"
         android:paddingRight="16dp"
 
-        android:drawableStart="@drawable/asset_15hdpi"
+        android:drawableStart="@drawable/logout2"
         android:textSize="14sp" />
 
 

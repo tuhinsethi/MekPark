@@ -32,11 +32,13 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="phone"
 
             android:textColor="@color/black"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+
             android:hint="10 digit mobile number" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Proceed"
+        android:backgroundTint="@color/red_button"
         android:textSize="16sp"
         android:textAllCaps="false"
         android:layout_marginTop="70dp"

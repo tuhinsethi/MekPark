@@ -186,6 +186,7 @@
         android:background="@drawable/button_bg"
         android:textColor="@color/home_background"
         android:fontFamily="@font/mont_med"
+        android:backgroundTint="@color/red_button"
 
         android:layout_alignParentBottom="true"
 

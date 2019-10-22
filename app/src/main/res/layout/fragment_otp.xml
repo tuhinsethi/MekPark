@@ -46,6 +46,8 @@
         android:textColor="@color/home_background"
         android:fontFamily="@font/mont_med"
         android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="8dp"
+        android:backgroundTint="@color/red_button"
+        android:id="@+id/enter" />
 
 </LinearLayout>
