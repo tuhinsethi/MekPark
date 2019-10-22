@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".feedback">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+
+        android:padding="16dp"
+        android:paddingTop="16dp"
+
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:layout_marginRight="10dp"
+            android:src="@drawable/back_arrow"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:textSize="16sp"
+            android:fontFamily="@font/gotham_med"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <View
+
+        android:layout_marginTop="4dp"
+
+        android:layout_height="1dp"
+        android:background="@color/chart_light_grey"
+        android:layout_width="match_parent"
+        >
+    </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/light_background"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please rate your experience"
+            android:fontFamily="@font/mont_semibold"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"/>
+
+           <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mont_med"
+            android:text="Do let us know your thoughts"
+            android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mont_med"
+            android:text="your thoughts matters!"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/smile_trippy"
+            android:layout_marginTop="40dp"
+            />
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/three_stars"
+            android:layout_marginTop="40dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:text="Enter Details"
+            android:textColor="@color/grey_white"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+
+
+
+
+            />
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/grey_white"
+
+                android:layout_height="80dp"
+                android:background="@drawable/button_box"
+                android:text="Describe your problem..."
+                />
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_box_redback"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:text="Submit Feedback"
+        android:textAllCaps="false"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
