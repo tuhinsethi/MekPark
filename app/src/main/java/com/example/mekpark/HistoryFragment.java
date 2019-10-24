@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Checkin extends Fragment {
+public class HistoryFragment extends Fragment {
 
 
-    public Checkin() {
+    public HistoryFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class Checkin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.checkin1, container, false);
+        return inflater.inflate(R.layout.fragment_history, container, false);
     }
 
 }

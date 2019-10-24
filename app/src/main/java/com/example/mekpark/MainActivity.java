@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnEnter(View v){
-        Intent i = new Intent(MainActivity.this,account_login.class);
+        Intent i = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(i);
 
     }

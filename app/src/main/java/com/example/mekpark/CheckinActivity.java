@@ -1,13 +1,16 @@
 package com.example.mekpark;
 
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,8 +19,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,17 +39,21 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
     List<MenuModel> headerList = new ArrayList<>();
     HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
     private int lastExpandedPosition = -1;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_layout);
+        setContentView(R.layout.home_layout);
 
-        dl = findViewById(R.id.dl);
+        dl = findViewById(R.id.drawer_layout);
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         t = new ActionBarDrawerToggle(this, dl, toolbar, R.string.open, R.string.close);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -75,16 +86,21 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         // navigationView.getMenu().getItem(1).setActionView(R.layout.menu_right_arrow);
         // navigationView.getMenu().getItem(3).setActionView(R.layout.menu_right_arrow);
         navigationView.setItemIconTintList(null);
+        setupDrawerContent(navigationView);
+        setBottomNavigation();
 
-     /*   // Set Navigation Header
-        View headerView      =  navigationView.getHeaderView(0);
+        setTabLayout();
+
+
+        // Set Navigation Header
+       /* View headerView      =  navigationView.getHeaderView(0);
 
         ImageView iv_profile =  headerView.findViewById(R.id.profile_pic);
         TextView tv_name     =  headerView.findViewById(R.id.name);
-        TextView tv_mobile   =  headerView.findViewById(R.id.mobile);
+        TextView tv_mobile   =  headerView.findViewById(R.id.mobile);*/
 
         // need to set a profile pic -
-        iv_profile.setOnClickListener(new View.OnClickListener() {
+     /*   iv_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(AppHomePage.this,Profile.class));
@@ -92,8 +108,8 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
             }
         });
         tv_name.setText(mUserInfo.get(LoginSessionManager.NAME));
-        tv_mobile.setText(mUserInfo.get(LoginSessionManager.MOBILE));
-*/
+        tv_mobile.setText(mUserInfo.get(LoginSessionManager.MOBILE));*/
+
 
         // Setup drawer view
 
@@ -102,9 +118,98 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
     }
 
+    private void setTabLayout() {
+
+        viewPager = findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
+
+        tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        List<Fragment> fragmentList = new ArrayList<>();
+        List<String> titles = new ArrayList<>();
+
+        fragmentList.add(new NewFragment());
+        fragmentList.add(new OngoingFragment());
+        fragmentList.add(new HistoryFragment());
+
+        titles.add("New");
+        titles.add("Ongoing");
+        titles.add("History");
+
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), fragmentList, titles);
+
+        viewPager.setAdapter(adapter);
+    }
+
+    public static class ViewPagerAdapter extends FragmentPagerAdapter {
+        private List<Fragment> mFragmentList;
+        private List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager, List<Fragment> fragmentsList, List<String> mFragmentTitleList) {
+            super(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+            this.mFragmentList = fragmentsList;
+            this.mFragmentTitleList = mFragmentTitleList;
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
+    }
+
+    private void setBottomNavigation() {
+
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment;
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    //toolbar.setTitle("Shop");
+//                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
+                    return true;
+                case R.id.navigation_location:
+                    //toolbar.setTitle("My Gifts");
+                    return true;
+                // case R.id.navigation_sm:
+
+                //  return true;
+                case R.id.navigation_walet:
+                    // startActivity(new Intent(NavActivity.this, OrderHistory.class));
+                    // toolbar.setTitle("Profile");
+                    return true;
+                case R.id.navigation_profile:
+                    // startActivity(new Intent(NavActivity.this, UserProfile.class));
+
+                    return true;
+            }
+            return false;
+        }
+    };
+
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.dl);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -151,9 +256,9 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
 
-                        selectDrawerItem(menuItem);
+                        // selectDrawerItem(menuItem);
 
-                        return true;
+                        return false;
 
                     }
 
@@ -170,9 +275,8 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
         Class fragmentClass = null;
 
-        switch (menuItem.getItemId()) {
-
-          /*  case R.id.nav_first_fragment:
+     /*   switch (menuItem.getItemId()) {
+            case R.id.nav_first_fragment:
 
                 fragmentClass = FirstFragment.class;
 
@@ -193,8 +297,8 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
             default:
 
                 fragmentClass = FirstFragment.class;
-*/
-        }
+
+        }*/
 
 
         try {
@@ -227,7 +331,9 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
+
+        dl.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     private void prepareMenuData() {
@@ -242,13 +348,13 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         menuModel = new MenuModel(1, "Bookings", true, true, R.drawable.wallet_dummy); //Menu of Java Tutorials
         headerList.add(menuModel);
         List<MenuModel> childModelsList = new ArrayList<>();
-        MenuModel childModel = new MenuModel(0, "New Bookings", false, false, 0);
+        MenuModel childModel = new MenuModel(10, "New Bookings", false, false, 0);
         childModelsList.add(childModel);
 
-        childModel = new MenuModel(1, "Ongoing Bookings", false, false, 0);
+        childModel = new MenuModel(11, "Ongoing Bookings", false, false, 0);
         childModelsList.add(childModel);
 
-        childModel = new MenuModel(2, "History", false, false, 0);
+        childModel = new MenuModel(12, "History", false, false, 0);
         childModelsList.add(childModel);
 
 
@@ -297,81 +403,91 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
         expandableListView.setAdapter(expandableListAdapter);
 
-      /*  expandableListView.setOnGroupClickListener((parent, v, groupPosition, id) -> {
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
 
 //            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            MenuModel menuModel = headerList.get(groupPosition);
-            int id_int = (int) id;
+                MenuModel menuModel = headerList.get(groupPosition);
+                int id_int = (int) id;
+                if (menuModel.isGroup() && menuModel.isHasChildren())
+                    return expandableListView.isGroupExpanded(groupPosition) ? expandableListView.collapseGroup(groupPosition) : expandableListView.expandGroup(groupPosition);
+                else return true;
 
-           if (menuModel.isGroup()) {
+                //   if (menuModel.isGroup()) {
 
-                if (!menuModel.isHasChildren()) {
-                    switch (id_int) {
-                        case 0:
-                            //startActivity(new Intent(NavActivity.this, UserProfile.class));
-                            break;
-                        case 1: //startActivity(new Intent(AppHomePage.this, MyAddressHomePage.class));
-                            delay(new UserProfile());
-                            break;
-                        case 2: //startActivity(new Intent(AppHomePage.this,MekCoinsWallet.class));break;
-                            break;
-                        case 3:
-                            delay(new OrderHistory());
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            delay(new AboutUs());
-                            break;
-                        case 6:
-                            delay(new Help());
-                            break;
-                        case 7: //startActivity(new Intent(AppHomePage.this, OffersHomePage.class));
-                            break;
-                        case 8: //startActivity(new Intent(AppHomePage.this, AboutUsPage.class));
-                            mSession.logoutUser();
-                            finish();
-                            break;
-                    }
-                    onBackPressed();
-               }
+
+                //  if (!menuModel.isHasChildren()) {
+
+                       /*switch (id_int) {
+                           case 0:
+                               //startActivity(new Intent(NavActivity.this, UserProfile.class));
+                               break;
+                           case 1: //startActivity(new Intent(AppHomePage.this, MyAddressHomePage.class));
+                               //  delay(new UserProfile());
+                               break;
+                           case 2: //startActivity(new Intent(AppHomePage.this,MekCoinsWallet.class));break;
+                               break;
+                           case 3:
+                               // delay(new OrderHistory());
+                               break;
+                           case 4:
+                               break;
+                           case 5:
+                               //  delay(new AboutUs());
+                               break;
+                           case 6:
+                               // delay(new Help());
+                               break;
+                           case 7: //startActivity(new Intent(AppHomePage.this, OffersHomePage.class));
+                               break;
+                           case 8: //startActivity(new Intent(AppHomePage.this, AboutUsPage.class));
+                               // mSession.logoutUser();
+                               CheckinActivity.this.finish();
+                               break;
+                       }*/
+                //  CheckinActivity.this.onBackPressed();
+                //   }
+                //  }
+
+
             }
+        });
 
-            return false;
-        });*/
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-       /* expandableListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
-
-            if (childList.get(headerList.get(groupPosition)) != null) {
-
-
-
-                if (groupPosition == 2) {
-                    switch (childPosition) {
-                        case 0:
-
-                            tabLayout.getTabAt(0).select();
+                if (childList.get(headerList.get(groupPosition)) != null) {
 
 
-                            break;
-                        case 1:
-                            tabLayout.getTabAt(1).select();
+                    if (groupPosition == 1) {
+                        switch (childPosition) {
+                            case 0:
 
-                            break;
-                        case 2:
-                            tabLayout.getTabAt(2).select();
+                                tabLayout.getTabAt(0).select();
 
-                            break;
+
+                                break;
+                            case 1:
+                                tabLayout.getTabAt(1).select();
+
+                                break;
+                            case 2:
+                                tabLayout.getTabAt(2).select();
+
+                                break;
+                        }
                     }
+
+                    CheckinActivity.this.onBackPressed();
+
                 }
 
-                onBackPressed();
+                return false;
 
             }
-
-            return false;
-
-        });*/
+        });
 
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
@@ -386,15 +502,21 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
             }
         });
     }
-  /*  public void delay(Activity activity){
+
+    public void delay(Activity activity) {
         Handler handler = new Handler();
 
-        handler.postDelayed(() -> {
-            Intent intent = new Intent(NavActivity.this, activity.getClass());
-            startActivity(intent);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //  Intent intent = new Intent(NavActivity.this, activity.getClass());
+                //  startActivity(intent);
 
+            }
         }, 250);
     }
-*/
-
 }
+
+
+
+

@@ -20,7 +20,7 @@
         android:layout_marginBottom="8dp"
         android:paddingRight="16dp"
         android:drawableEnd="@drawable/arrow_icon"
-        android:drawableStart="@drawable/photu_person"
+        android:drawableStart="@drawable/photo_circle"
         android:textSize="14sp" />
 
 </LinearLayout>

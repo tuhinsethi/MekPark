@@ -105,7 +105,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         if (menuModel.isHasChildren()) {
             lblListHeader.setCompoundDrawablesWithIntrinsicBounds(leftDrawalbleId,
-                    0, isExpanded ? R.drawable.ic_keyboard_arrow_down : R.drawable.arrow_icon, 0);
+                    0, isExpanded ? R.drawable.grey_dropdown_arrow : R.drawable.arrow_icon, 0);
         } else {
             lblListHeader.setCompoundDrawablesWithIntrinsicBounds(leftDrawalbleId,
                     0, 0, 0);
