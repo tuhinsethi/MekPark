@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ErrorActivity"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/part1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="License Plate Number displayed(Click LCD image)"
+                android:textSize="8sp"
+                android:textColor="@color/red_button"
+                android:fontFamily="@font/mont_reg"
+                android:id="@+id/click" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/click"
+                android:drawableRight="@drawable/camera"
+                android:textSize="16sp"
+                android:text="AAACH14423P"
+                android:textStyle="bold"
+                android:fontFamily="@font/mont_semibold"
+                android:id="@+id/car_num" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lcd"
+                android:id="@+id/lcd"
+                android:layout_below="@id/car_num"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capture License Plate pic"
+                android:layout_below="@id/lcd"
+                android:textSize="10sp"
+                android:textColor="@color/light_black"
+                android:fontFamily="@font/mont_semibold"
+                android:id="@+id/capture" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/capture"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/file_name"
+                    android:textSize="14sp"
+                    android:text="filename.jpeg"
+                    android:textColor="@color/black"
+                    android:paddingRight="40dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:fontFamily="@font/mont_reg"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="remove"
+                    android:textSize="10sp"
+                    android:textColor="@color/red_button"
+                    android:clickable="true"
+                    android:fontFamily="@font/mont_reg" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/part2"
+            android:layout_below="@id/part1"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="License Plate Number displayed(Click LCD image)"
+                android:textSize="8sp"
+                android:textColor="@color/red_button"
+                android:fontFamily="@font/mont_reg"
+                android:id="@+id/click1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/click1"
+                android:drawableRight="@drawable/camera"
+                android:textSize="16sp"
+                android:text="AAACH14423P"
+                android:textStyle="bold"
+                android:fontFamily="@font/mont_semibold"
+                android:id="@+id/car_num1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/car_num"
+                android:id="@+id/actual"
+                android:layout_below="@id/car_num1"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capture License Plate pic"
+                android:layout_below="@id/actual"
+                android:textSize="10sp"
+                android:textColor="@color/light_black"
+                android:fontFamily="@font/mont_semibold"
+                android:id="@+id/capture1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/capture1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/file_name1"
+                    android:textSize="14sp"
+                    android:text="filename.jpeg"
+                    android:textColor="@color/black"
+                    android:paddingRight="40dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:fontFamily="@font/mont_reg"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="remove"
+                    android:textSize="10sp"
+                    android:textColor="@color/red_button"
+                    android:clickable="true"
+                    android:fontFamily="@font/mont_reg" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_box"
+                android:layout_below="@id/ll2"
+                android:hint="Notes if any..\n\n\n\n\n"
+                android:gravity="top|left"
+                android:id="@+id/notes"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Submit &amp; Start Parking"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/red_button"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/notes"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/mont_reg" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

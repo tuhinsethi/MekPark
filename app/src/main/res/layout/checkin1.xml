@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="192dp"
-            android:background="@drawable/green_circle"
+            android:background="@drawable/green_circ"
             android:fontFamily="@font/gotham_med"
             android:text="Start Parking"
             android:textAllCaps="false"
