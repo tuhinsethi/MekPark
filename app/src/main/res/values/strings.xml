@@ -10,5 +10,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="caution">Parking at owners risk. No responsibility for valuable items like Laptop, Wallet, cash etc. <font fgcolor='#000000'>Lost ticket charges ₹ 20</font> after verification.</string>
+    <string name="powered">Powered by: <font fgcolor='#000000'> Mekpark.com</font></string>
 
 </resources>

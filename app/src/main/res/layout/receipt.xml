@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SDMC AUTHORISED PARKING"
+        android:fontFamily="@font/gotham_book"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:id="@+id/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BHIKAJI CAMA PLACE"
+        android:textColor="@color/light_black"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:fontFamily="@font/gotham_book"
+        android:textSize="12sp"
+        android:layout_margin="8dp"
+        android:id="@+id/sub" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/date"
+        android:layout_below="@id/sub">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/04/19"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1:30 PM"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="end" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/date"
+        android:layout_marginTop="20dp"
+        android:id="@+id/car_num">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="CAR No."
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            android:fontFamily="@font/gotham_book"
+            android:layout_below="@id/date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DL1AB3309"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gotham_book"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/make"
+        android:layout_below="@id/car_num"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make -"
+            android:fontFamily="@font/gotham_book"
+            android:textSize="14sp"
+            android:textColor="@color/light_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maruti suzuki"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/gotham_book"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model -"
+            android:fontFamily="@font/gotham_book"
+            android:textSize="14sp"
+            android:textColor="@color/light_black"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wagon R"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/gotham_book"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rate"
+        android:layout_below="@id/make"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\u20B9 20/hrs"
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u20B9 100/24 hrs"
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="end" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rate"
+        android:layout_marginTop="20dp"
+        android:id="@+id/operator_id">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="OPERATOR ID -"
+            android:textColor="@color/light_black"
+            android:textSize="14sp"
+            android:fontFamily="@font/gotham_book"
+            android:layout_below="@id/date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="492701"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gotham_book"
+            android:paddingLeft="20dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/caution"
+        android:layout_below="@id/operator_id"
+        android:text="@string/caution"
+        android:fontFamily="@font/gotham_book"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caution"
+        android:text="@string/powered"
+        android:fontFamily="@font/gotham_book"
+        android:id="@+id/courtesy" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*************************"
+        android:layout_below="@id/courtesy"
+        android:gravity="center" />
+
+
+</RelativeLayout>
