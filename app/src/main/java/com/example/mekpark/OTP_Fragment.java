@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class fragment_2 extends Fragment {
-    public fragment_2() {
+public class OTP_Fragment extends Fragment {
+    public OTP_Fragment() {
 
     }
 

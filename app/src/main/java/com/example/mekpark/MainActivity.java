@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void onProfile(View v){
 
 
-        Intent i = new Intent(MainActivity.this,profile.class);
+        Intent i = new Intent(MainActivity.this, Profile.class);
         startActivity(i);
     }
     public void onReciept(View v){

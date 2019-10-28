@@ -99,7 +99,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         TextView tv_name     =  headerView.findViewById(R.id.name);
         TextView tv_mobile   =  headerView.findViewById(R.id.mobile);*/
 
-        // need to set a profile pic -
+        // need to set a Profile pic -
      /*   iv_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -182,7 +182,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                Fragment fragment;
+//                Fragment LoginFragment;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     //toolbar.setTitle("Shop");
@@ -269,7 +269,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
     public void selectDrawerItem(MenuItem menuItem) {
 
-        // Create a new fragment and specify the fragment to show based on nav item clicked
+        // Create a new LoginFragment and specify the LoginFragment to show based on nav item clicked
 
         Fragment fragment = null;
 
@@ -312,7 +312,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         }
 
 
-        // Insert the fragment by replacing any existing fragment
+        // Insert the LoginFragment by replacing any existing LoginFragment
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 

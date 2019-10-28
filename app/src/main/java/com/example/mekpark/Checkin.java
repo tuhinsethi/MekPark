@@ -23,7 +23,7 @@ public class Checkin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this LoginFragment
         return inflater.inflate(R.layout.checkin1, container, false);
     }
 

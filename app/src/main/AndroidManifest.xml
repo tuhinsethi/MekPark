@@ -12,7 +12,7 @@
         <activity android:name=".ReceiptActivity"></activity>
         <activity android:name=".ErrorActivity" />
         <activity
-            android:name=".profile"
+            android:name=".Profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/NoActionBar" />
         <activity

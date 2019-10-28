@@ -9,9 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class fragment extends Fragment {
+public class LoginFragment extends Fragment {
 
-    public fragment() {
+    public LoginFragment() {
 
     }
 
