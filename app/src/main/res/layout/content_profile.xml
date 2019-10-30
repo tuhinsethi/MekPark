@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
-    tools:context=".profile"
+    tools:context=".Profile"
     android:background="@color/white"
     >
 
@@ -31,32 +31,11 @@
                    android:layout_width="20dp"
                    android:layout_height="20dp"
 
-                   android:layout_marginRight="10dp"
-                   android:src="@drawable/back_arrow"
-                   android:onClick="onReturn"
-                   />
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Profile"
-                   android:textSize="16sp"
-                   android:fontFamily="@font/gotham_med"
-                   android:textColor="@color/black"/>
-
-           </LinearLayout>
-
-           <View
-
-               android:layout_marginTop="4dp"
-
-               android:layout_height="1dp"
-               android:background="@color/chart_light_grey"
-               android:layout_width="match_parent"
-               >
 
 
-           </View>
+
+
+
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -152,11 +131,12 @@
                        android:paddingLeft="10dp"/>
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
                        android:layout_gravity="center"
+                       app:srcCompat="@drawable/greytick"
 
                        />
                </LinearLayout>
@@ -210,10 +190,11 @@
                        android:paddingLeft="10dp"/>
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
+                       app:srcCompat="@drawable/greytick"
                        android:layout_gravity="center"
 
 
@@ -271,12 +252,13 @@
                         />
 
 
-                   <ImageView
+                   <androidx.appcompat.widget.AppCompatImageView
 
 
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greytick"
+
+                       app:srcCompat="@drawable/greytick"
                        android:layout_gravity="center"
 
 
@@ -328,10 +310,12 @@
 
                        android:layout_height="16dp"
                        android:src="@drawable/attach_icon"/>
-                   <ImageView
+
+                   <androidx.appcompat.widget.AppCompatImageView
                        android:layout_width="16dp"
                        android:layout_height="16dp"
-                       android:src="@drawable/greentick"
+
+                       app:srcCompat="@drawable/greentick"
                        android:layout_gravity="center" />
 
 
@@ -427,7 +411,8 @@
                    android:textAllCaps="false"
                    android:fontFamily="@font/mont_med"
                    android:textColor="@color/white"
-                   android:background="@drawable/button_box_redback"
+                   android:background="@drawable/button_bg"
+                   android:backgroundTint="@color/red_button"
                    />
 
            </FrameLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item"
+    android:elevation="4dp"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:id="@+id/ll">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10 Aug 2018"
+                android:textSize="12sp"
+                android:id="@+id/date"
+                android:textColor="@color/grey_white"
+                android:fontFamily="@font/mont_med"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="#123"
+
+                    android:textSize="14sp"
+                    android:id="@+id/number"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/mont_med"
+                    android:padding="8dp"
+                    android:background="@color/grey_white"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="10:30 p.m"
+                    android:background="@color/grey_white"
+
+                    android:textSize="14sp"
+                    android:id="@+id/time"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/mont_med"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/white_side_arrow"
+
+
+                    android:gravity="end" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll"
+
+            android:id="@+id/ll1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/suzuki_logo"
+                android:layout_margin="8dp"
+                android:id="@+id/logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wagonar R"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/mont_semibold"
+
+
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/car_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DL1PB3201"
+                    android:textSize="12sp"
+                    android:id="@+id/car_number"
+                    android:layout_marginTop="10dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Confirmed"
+            android:textSize="10sp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/green"
+            android:id="@+id/pay_status"
+            android:drawableEnd="@drawable/greentick"
+            android:layout_below="@id/ll"
+            android:drawablePadding="10dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/green_phone"
+            android:text="Call"
+            android:drawablePadding="5dp"
+            android:textSize="8sp"
+            android:layout_below="@id/pay_status"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking Completed"
+            android:fontFamily="@font/mont_med"
+            android:textColor="@color/green"
+            android:layout_marginTop="10dp"
+            android:id="@+id/status"
+            android:textSize="10sp"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="24dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Need Help?"
+            android:layout_below="@id/status"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/park_car"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/car"
+            android:layout_marginTop="20dp" />
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

@@ -22,9 +22,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
-                Fragment fragment = new fragment_2();
+                Fragment otp = new OTP_Fragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.replace, fragment);
+                transaction.replace(R.id.replace, otp);
 
                 transaction.commit();
             }

@@ -18,7 +18,7 @@
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/asset_7xxxhdpi"
+        android:src="@drawable/back_arrow"
         android:layout_margin="16dp" />
 
     <ImageView
@@ -32,10 +32,12 @@
         android:id="@+id/replace"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        android:layout_marginTop="140dp"
         >
 
         <include layout="@layout/fragment_login" />
+
+
     </FrameLayout>
 
 

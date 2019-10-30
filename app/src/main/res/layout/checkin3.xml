@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Awaiting Parking"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_med"
+        android:background="@color/yellow2"
+        android:id="@+id/status1" />
+
+    <include
+        layout="@layout/car_desc_common"
+        android:id="@+id/car_desc" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/car_desc"
+        android:id="@+id/ll1">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/location"
+            android:layout_margin="20dp"
+            android:id="@+id/logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geeta Colony"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_semibold"
+                android:layout_marginTop="20dp"
+                android:id="@+id/address1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Delhi, India"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_semibold"
+
+                android:id="@+id/address2" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Call"
+            android:drawableTop="@drawable/green_phone"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/grey_white"
+            android:paddingTop="30dp"
+            android:layout_gravity="end"
+
+            android:layout_marginLeft="80dp"
+            android:drawablePadding="10dp"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        android:layout_below="@id/ll1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/ll1"
+        android:id="@+id/ll3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginLeft="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Park IN Time   :"
+                android:fontFamily="@font/gotham_med"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 p.m"
+                android:textStyle="bold"
+                android:paddingLeft="40dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginLeft="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fare Details   :"
+                android:fontFamily="@font/gotham_med"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/Hr"
+                android:textStyle="bold"
+                android:paddingLeft="40dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Details"
+        android:layout_below="@id/ll3"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:id="@+id/tv_details" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_details"
+        android:id="@+id/ll4"
+        android:background="@drawable/edittext_box"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="3"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="For 1hr to 12hr   :"
+                android:fontFamily="@font/gotham_med"
+                android:textSize="12sp"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="\u20B9 10/hr"
+                android:textStyle="bold"
+                android:layout_weight="1"
+
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="3"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="For 12hr to 24hr:"
+                android:fontFamily="@font/gotham_med"
+                android:textSize="12sp"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="\u20B9 50/hr"
+                android:textStyle="bold"
+
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="3"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Night Charges*"
+                android:fontFamily="@font/gotham_med"
+                android:textSize="12sp"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Extra"
+                android:textStyle="bold"
+
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/ll4"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mont_med"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red_button"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accept"
+            android:fontFamily="@font/mont_med"
+            android:textAllCaps="false"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/dark_grey_button"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginRight="16dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

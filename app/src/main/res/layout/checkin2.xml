@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/open"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Awaiting Parking"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_med"
+        android:background="@color/yellow2"
+        android:id="@+id/status" />
+
+    <include
+        layout="@layout/car_desc_common"
+        android:id="@+id/car_desc" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Pin &amp; click open gate"
+        android:id="@+id/enter"
+        android:layout_below="@id/car_desc"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/got_med"
+        android:textSize="16sp"
+        android:textColor="@color/light_black" />
+
+    <include
+        layout="@layout/pin_format"
+        android:layout_below="@id/enter"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/pin"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Gate"
+        android:background="@drawable/green_circ"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/got_med"
+        android:layout_below="@id/pin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+
+</RelativeLayout>
