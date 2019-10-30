@@ -12,24 +12,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account_login);
+        setContentView(R.layout.main2);
 
-        login = findViewById(R.id.login);
-        login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
     }
+    public void onError(View v){
+
+        Intent i = new Intent(MainActivity.this,error_report.class);
+        startActivity(i);
+
+    }
 
     public void OnEnter(View v){
-        Intent i = new Intent(MainActivity.this,account_login.class);
+        Intent i = new Intent(MainActivity.this,page_a.class);
         startActivity(i);
 
     }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mekpark">
 
     <application
@@ -8,19 +9,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".page_a"></activity>
-        <activity android:name=".feedback" />
-        <activity android:name=".completion" />
-        <activity android:name=".reciept" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".error_report"
+            android:theme="@style/NoActionBar"></activity>
+        <activity android:name=".feedback"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".completion"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".reciept"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".page_a"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".account_login" />
-            android:theme="@style/NoActionBar"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
