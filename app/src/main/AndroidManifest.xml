@@ -9,19 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ReceiptActivity"></activity>
-        <activity android:name=".ErrorActivity" />
         <activity
-            android:name=".Profile"
+            android:name=".Activities.OpenActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Activities.AwaitingActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ReceiptActivity" />
+        <activity
+            android:name=".Activities.ErrorActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.LoginActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.NavActivity"
             android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".CheckinActivity"
-            android:theme="@style/NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

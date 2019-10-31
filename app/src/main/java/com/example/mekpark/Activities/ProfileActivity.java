@@ -1,4 +1,4 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Profile extends AppCompatActivity {
+import com.example.mekpark.R;
+
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void onReturn(View v){
-        Intent i = new Intent(Profile.this, LoginActivity.class);
+        Intent i = new Intent(ProfileActivity.this, LoginActivity.class);
         startActivity(i);
 
     }

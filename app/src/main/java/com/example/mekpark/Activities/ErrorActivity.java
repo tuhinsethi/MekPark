@@ -1,4 +1,4 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -6,6 +6,8 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mekpark.R;
 
 public class ErrorActivity extends AppCompatActivity {
 

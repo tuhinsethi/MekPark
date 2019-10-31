@@ -1,63 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/open"
-    android:background="@color/white">
 
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.NavActivity"
+    android:id="@+id/open"
+    android:background="@color/white"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Awaiting Parking"
+        android:background="@color/white"
+        android:paddingBottom="30dp">
+
+
+        <TextView
+            android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:background="@color/yellow2"
+            android:fontFamily="@font/gotham_med"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:textSize="12sp"
+            android:text="Awaiting Parking"
         android:textColor="@color/white"
-        android:fontFamily="@font/gotham_med"
-        android:background="@color/yellow2"
-        android:id="@+id/status" />
+            android:textSize="12sp" />
 
     <include
+        android:id="@+id/car_desc"
         layout="@layout/car_desc_common"
-        android:id="@+id/car_desc" />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Pin &amp; click open gate"
+        android:layout_below="@id/status"
+
+        />
+
+    <TextView
         android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/car_desc"
-        android:gravity="center"
         android:layout_marginTop="16dp"
-        android:textStyle="bold"
         android:fontFamily="@font/got_med"
-        android:textSize="16sp"
-        android:textColor="@color/light_black" />
+        android:gravity="center"
+        android:text="Enter Pin &amp; click open gate"
+        android:textColor="@color/light_black"
+        android:textSize="14sp" />
 
     <include
-        layout="@layout/pin_format"
-        android:layout_below="@id/enter"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
         android:id="@+id/pin"
+        layout="@layout/pin_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
 
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Gate"
-        android:background="@drawable/green_circ"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:fontFamily="@font/got_med"
         android:layout_below="@id/pin"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/green_circ"
+        android:fontFamily="@font/got_med"
+        android:text="Open Gate"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>
+</ScrollView>
+

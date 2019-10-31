@@ -1,4 +1,4 @@
-package com.example.mekpark;
+package com.example.mekpark.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.mekpark.Activities.NavActivity;
+import com.example.mekpark.GenericTextWatcher;
+import com.example.mekpark.R;
 
 public class OTP_Fragment extends Fragment {
     public OTP_Fragment() {
@@ -25,7 +29,7 @@ public class OTP_Fragment extends Fragment {
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), CheckinActivity.class);
+                Intent intent = new Intent(getActivity(), NavActivity.class);
                 startActivity(intent);
             }
         });

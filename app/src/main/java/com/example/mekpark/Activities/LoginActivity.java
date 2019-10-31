@@ -1,4 +1,4 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.mekpark.Fragments.OTP_Fragment;
+import com.example.mekpark.R;
 
 public class LoginActivity extends AppCompatActivity {
     Button proceed;

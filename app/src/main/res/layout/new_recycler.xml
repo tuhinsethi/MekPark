@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/item"
     android:elevation="4dp"
-    android:layout_margin="16dp">
+    android:layout_margin="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -224,7 +224,8 @@
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="16dp"
+                android:id="@+id/reject" />
 
             <Button
                 android:layout_width="0dp"
@@ -237,7 +238,8 @@
                 android:backgroundTint="@color/dark_grey_button"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="16dp"
+                android:id="@+id/accept" />
 
         </LinearLayout>
 
