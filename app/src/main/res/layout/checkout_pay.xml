@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".page_a"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:src="@drawable/back_arrow"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentStart="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Checkout"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mont_bold"
+            android:layout_marginTop="17dp"></TextView>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+
+        android:layout_height="0.7dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view1"
+        android:background="@color/chart_light_grey"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/home_background"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount"
+            android:textSize="14sp"
+            android:textColor="@color/app_caption_dark_grey"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/mont_semibold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="3,200"
+            android:textColor="@color/app_caption_dark_grey"
+            android:fontFamily="@font/mont_bold"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="30dp"
+
+
+            ></TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/button_box_whiteback">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginLeft="30dp"
+
+            android:layout_height="wrap_content"
+            android:text="COD (cash on delivery)"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            ></TextView>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"></RadioButton>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_grey_headline_caption"
+        android:fontFamily="@font/gotham_book"
+        android:text="Saved Cards"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="25dp"></TextView>
+
+    <LinearLayout
+
+        android:background="@color/home_background"
+
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+
+
+            android:background="@drawable/button_box_whiteback">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="23dp"
+                android:src="@drawable/mastercard"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"
+
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:layout_marginLeft="80dp"
+
+                android:layout_height="wrap_content"
+                android:text="5115 XXXX XXXX 0997"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+
+
+                ></TextView>
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_icon"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"></ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="10dp"
+
+
+            android:background="@drawable/button_box_whiteback">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="23dp"
+                android:src="@drawable/visa"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"
+
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:layout_marginLeft="80dp"
+
+                android:layout_height="wrap_content"
+                android:text="5115 XXXX XXXX 0997"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+
+
+                ></TextView>
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_icon"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"></ImageView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_grey_headline_caption"
+        android:fontFamily="@font/gotham_book"
+        android:text="Payment Option"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="25dp"></TextView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="10dp"
+
+
+        android:background="@drawable/button_box_whiteback">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:src="@drawable/card"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginLeft="80dp"
+
+            android:layout_height="wrap_content"
+            android:text="Debit/Credit Card"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+
+            ></TextView>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/arrow_icon"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"></ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="10dp"
+
+
+        android:background="@drawable/button_box_whiteback">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:src="@drawable/paytm"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginLeft="80dp"
+
+            android:layout_height="wrap_content"
+            android:text="Paytm"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+
+            ></TextView>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/arrow_icon"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"></ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="10dp"
+
+
+        android:background="@drawable/button_box_whiteback">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:src="@drawable/pay_u"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginLeft="80dp"
+
+            android:layout_height="wrap_content"
+            android:text="Pay U"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+
+            ></TextView>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/arrow_icon"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"></ImageView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:padding="10dp"
+
+
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_box_redback"
+
+            android:textColor="@color/white"
+            android:fontFamily="@font/mont_med"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:text="Pay"></Button>
+
+
+    </RelativeLayout>
+</LinearLayout>
