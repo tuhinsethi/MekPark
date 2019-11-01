@@ -57,4 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void onParkingComplete(View v){
+
+        Intent i = new Intent(MainActivity.this,parkingcompleted.class);
+        startActivity(i);
+
+    }
 }

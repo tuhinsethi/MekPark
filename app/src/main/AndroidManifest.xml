@@ -11,10 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".error_report"
+        <activity android:name=".parkingcompleted"
             android:theme="@style/NoActionBar"></activity>
-        <activity android:name=".feedback"
-            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".error_report"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".feedback"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".completion"
             android:theme="@style/NoActionBar" />

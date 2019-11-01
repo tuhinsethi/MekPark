@@ -1,14 +1,14 @@
 package com.example.mekpark;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ReceiptActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class parkingcompleted extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receipt2);
+        setContentView(R.layout.activity_parkingcompleted);
     }
 }

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".parkingcompleted">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/back_arrow"
+
+            />
+
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="25dp"
+            android:layout_marginRight="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/headfone" />
+        <ImageView
+            android:id="@+id/reload"
+            android:layout_alignParentEnd="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/reload"></ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/green2">
+        <TextView
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mont_reg"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Parking Completed"></TextView>
+    </RelativeLayout>
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="19dp"
+                android:textColor="@color/app_caption_light_grey"
+                android:text="Maruti Suzuki"
+                android:fontFamily="@font/mont_med"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WagonR"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/red_button"
+                android:fontFamily="@font/mont_semibold"
+                android:textSize="16sp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/dark_grey_button"
+                android:text="dl1r0abc"
+                android:textAllCaps="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                ></TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <ImageView
+
+
+android:layout_centerHorizontal="true"                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/wagonr"></ImageView>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_white"></View>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/location"></ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geeta Colony,"
+                android:textColor="@color/app_caption_light_grey"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/app_caption_light_grey"
+                android:text="New Delhi,India"></TextView>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#MekPark10"
+                android:textColor="@color/app_caption_light_grey"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_icon"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:text="Payment Confirmed"
+            android:fontFamily="@font/mont_med"
+            android:layout_marginLeft="43dp"></TextView>
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="22dp"
+            app:srcCompat="@drawable/tick_white"
+            android:background="@color/green"
+            ></ImageView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/greenmobile"
+                android:layout_marginRight="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:src="@drawable/green_phone"></ImageView>
+            <TextView
+                android:fontFamily="@font/mont_med"
+                android:layout_marginRight="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:textColor="@color/grey_white"
+                android:textSize="12sp"></TextView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/grey_white"></View>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp">
+        <TableRow
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Parking Date"
+                android:textColor="@color/dark_grey_button"></TextView>
+
+            <TextView
+
+                android:fontFamily="@font/mont_semibold"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/dark_grey_button"
+                android:textSize="12sp"
+                ></TextView>
+
+            <TextView
+
+                android:fontFamily="@font/mont_semibold"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    10th Aug.2018"
+                android:textColor="@color/dark_grey_button"
+                android:textSize="12sp"
+                ></TextView>
+        </TableRow>
+
+        <TableRow
+
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Parking Time"
+                android:textColor="@color/dark_grey_button"></TextView>
+
+            <TextView
+
+                android:fontFamily="@font/mont_semibold"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/dark_grey_button"
+                android:textSize="12sp"
+                ></TextView>
+
+            <TextView
+
+                android:fontFamily="@font/mont_semibold"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    2 p.m"
+                android:textColor="@color/dark_grey_button"
+                android:textSize="12sp"
+                ></TextView>
+        </TableRow>   <TableRow
+
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Duration"
+            android:textColor="@color/dark_grey_button"></TextView>
+
+        <TextView
+
+            android:fontFamily="@font/mont_semibold"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dark_grey_button"
+            android:textSize="12sp"
+            ></TextView>
+
+        <TextView
+
+            android:fontFamily="@font/mont_semibold"
+            android:gravity="start"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    3 Hrs"
+            android:textColor="@color/dark_grey_button"
+            android:textSize="12sp"
+            ></TextView>
+    </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Payment details"
+        android:textColor="@color/app_caption_light_grey"
+        android:fontFamily="@font/mont_med"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="28dp"></TextView>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/buttonedges3"
+
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        >
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_white"
+                android:textSize="10sp"
+                android:text="Sub Total"
+
+                ></TextView>
+            <TextView
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_semibold"
+                android:textSize="12sp"
+                android:text="3200"
+
+                ></TextView>
+
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_white"
+                android:textSize="10sp"
+                android:text="Tax"
+
+                ></TextView>
+            <TextView
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_semibold"
+                android:textSize="12sp"
+                android:text="200"
+
+                ></TextView>
+
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_white"
+                android:textSize="10sp"
+                android:text="Additional Charges*"
+
+                ></TextView>
+            <TextView
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_semibold"
+                android:textSize="12sp"
+                android:text="100"
+
+                ></TextView>
+
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_white"
+                android:textSize="10sp"
+                android:text="Total"
+
+                ></TextView>
+            <TextView
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_semibold"
+                android:textSize="12sp"
+                android:text="200"
+
+                ></TextView>
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/chart_light_grey"></View>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Book Again"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mont_semibold"
+
+            android:textColor="@color/white"
+            android:background="@drawable/button_box_redback">
+
+
+        </Button>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Print Reciept"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+
+            android:textAllCaps="false"
+            android:fontFamily="@font/mont_semibold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_box_greyback"></Button>
+
+    </LinearLayout>
+</LinearLayout>
