@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity"
+        tools:context=".Activities.LoginActivity"
     android:orientation="vertical"
         android:background="@color/home_background"
     >
@@ -112,7 +112,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/home_background">
+                android:background="@color/home_background"
+                android:id="@+id/faq">
 
                 <ImageView
                     android:src="@drawable/question_icon"
@@ -160,7 +161,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:id="@+id/feedback">
 
                 <ImageView
                     android:src="@drawable/message_icon"

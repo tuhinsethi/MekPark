@@ -1,10 +1,12 @@
-package com.example.mekpark;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.mekpark.Activities;
 
 import android.os.Bundle;
 
-public class feedback extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mekpark.R;
+
+public class FeedbackActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

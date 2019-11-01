@@ -232,7 +232,6 @@
         android:layout_marginLeft="25dp"></TextView>
 
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -382,6 +381,7 @@
 
 
         >
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -392,9 +392,7 @@
             android:textSize="16sp"
             android:layout_alignParentBottom="true"
             android:textAllCaps="false"
-            android:text="Pay"
-            ></Button>
-
+            android:text="Pay"></Button>
 
 
     </RelativeLayout>

@@ -1,6 +1,7 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.mekpark.Adapters.ExpandableListAdapter;
+import com.example.mekpark.Fragments.Checkin;
+import com.example.mekpark.Fragments.HistoryFragment;
+import com.example.mekpark.Fragments.NewFragment;
+import com.example.mekpark.Fragments.OngoingFragment;
+import com.example.mekpark.MenuModel;
+import com.example.mekpark.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -30,10 +38,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class CheckinActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout dl;
-    private ActionBarDrawerToggle t;
-    private NavigationView nv;
+public class NavActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public DrawerLayout dl;
+    public ActionBarDrawerToggle t;
+
     ExpandableListAdapter expandableListAdapter;
     ExpandableListView expandableListView;
     List<MenuModel> headerList = new ArrayList<>();
@@ -41,6 +49,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
     private int lastExpandedPosition = -1;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    Toolbar toolbar;
 
 
     @Override
@@ -48,11 +57,9 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
 
-        dl = findViewById(R.id.drawer_layout);
 
+        toolbar = findViewById(R.id.toolbar);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        t = new ActionBarDrawerToggle(this, dl, toolbar, R.string.open, R.string.close);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -61,11 +68,48 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             toolbar.setNavigationIcon(R.drawable.menu);
         }
+
+
+        // navigationView.getMenu().getItem(1).setActionView(R.layout.menu_right_arrow);
+        // navigationView.getMenu().getItem(3).setActionView(R.layout.menu_right_arrow);
+        setNavDrawer();
+        setBottomNavigation();
+
+        setTabLayout();
+
+
+        // Set Navigation Header
+       /* View headerView      =  navigationView.getHeaderView(0);
+
+        ImageView iv_profile =  headerView.findViewById(R.id.profile_pic);
+        TextView tv_name     =  headerView.findViewById(R.id.name);
+        TextView tv_mobile   =  headerView.findViewById(R.id.mobile);*/
+
+        // need to set a ProfileActivity pic -
+     /*   iv_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(AppHomePage.this,ProfileActivity.class));
+                dl.closeDrawer(GravityCompat.START);
+            }
+        });
+        tv_name.setText(mUserInfo.get(LoginSessionManager.NAME));
+        tv_mobile.setText(mUserInfo.get(LoginSessionManager.MOBILE));*/
+
+
+        // Setup drawer view
+
+        // setupDrawerContent(nv);
+
+
+    }
+
+    public void setNavDrawer() {
+        dl = findViewById(R.id.drawer_layout);
+        t = new ActionBarDrawerToggle(this, dl, toolbar, R.string.open, R.string.close);
         expandableListView = findViewById(R.id.expandableListView);
         prepareMenuData();
         populateExpandableList();
-
-
         dl.addDrawerListener(t);
         t.syncState();
         t.setDrawerIndicatorEnabled(false);
@@ -81,44 +125,15 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
                 }
             }
         });
+        viewPager = findViewById(R.id.viewpager);
+        tabLayout = findViewById(R.id.tabs);
         NavigationView navigationView = findViewById(R.id.nv);
         navigationView.setNavigationItemSelectedListener(this);
-        // navigationView.getMenu().getItem(1).setActionView(R.layout.menu_right_arrow);
-        // navigationView.getMenu().getItem(3).setActionView(R.layout.menu_right_arrow);
         navigationView.setItemIconTintList(null);
         setupDrawerContent(navigationView);
-        setBottomNavigation();
-
-        setTabLayout();
-
-
-        // Set Navigation Header
-       /* View headerView      =  navigationView.getHeaderView(0);
-
-        ImageView iv_profile =  headerView.findViewById(R.id.profile_pic);
-        TextView tv_name     =  headerView.findViewById(R.id.name);
-        TextView tv_mobile   =  headerView.findViewById(R.id.mobile);*/
-
-        // need to set a Profile pic -
-     /*   iv_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //startActivity(new Intent(AppHomePage.this,Profile.class));
-                dl.closeDrawer(GravityCompat.START);
-            }
-        });
-        tv_name.setText(mUserInfo.get(LoginSessionManager.NAME));
-        tv_mobile.setText(mUserInfo.get(LoginSessionManager.MOBILE));*/
-
-
-        // Setup drawer view
-
-        // setupDrawerContent(nv);
-
-
     }
 
-    private void setTabLayout() {
+    public void setTabLayout() {
 
         viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -127,7 +142,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private void setupViewPager(ViewPager viewPager) {
+    public void setupViewPager(ViewPager viewPager) {
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> titles = new ArrayList<>();
 
@@ -172,13 +187,13 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         }
     }
 
-    private void setBottomNavigation() {
+    public void setBottomNavigation() {
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+    public BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -187,6 +202,20 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
                 case R.id.navigation_home:
                     //toolbar.setTitle("Shop");
 //                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
+                    // startActivity(new Intent(NavActivity.this, AwaitingActivity.class));
+                    try {
+                        hideTab(tabLayout);
+                        Fragment fragment = Checkin.class.newInstance();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+
+                        fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    } catch (InstantiationException e) {
+                        e.printStackTrace();
+                    }
+
                     return true;
                 case R.id.navigation_location:
                     //toolbar.setTitle("My Gifts");
@@ -196,10 +225,10 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
                 //  return true;
                 case R.id.navigation_walet:
                     // startActivity(new Intent(NavActivity.this, OrderHistory.class));
-                    // toolbar.setTitle("Profile");
+                    // toolbar.setTitle("ProfileActivity");
                     return true;
                 case R.id.navigation_profile:
-                    // startActivity(new Intent(NavActivity.this, UserProfile.class));
+                    startActivity(new Intent(NavActivity.this, ProfileActivity.class));
 
                     return true;
             }
@@ -336,7 +365,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
         return true;
     }
 
-    private void prepareMenuData() {
+    public void prepareMenuData() {
 
         MenuModel menuModel = new MenuModel(0, "My Account", false, true, R.drawable.profile_dummy); //Menu of Android Tutorial. No sub menus
         headerList.add(menuModel);
@@ -396,7 +425,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
     }
 
-    private void populateExpandableList() {
+    public void populateExpandableList() {
 
         expandableListAdapter = new ExpandableListAdapter(this, headerList, childList);
 
@@ -410,21 +439,22 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 //            DrawerLayout drawer = findViewById(R.id.drawer_layout);
                 MenuModel menuModel = headerList.get(groupPosition);
                 int id_int = (int) id;
-                if (menuModel.isGroup() && menuModel.isHasChildren())
+               /* if (menuModel.isGroup() && menuModel.isHasChildren())
                     return expandableListView.isGroupExpanded(groupPosition) ? expandableListView.collapseGroup(groupPosition) : expandableListView.expandGroup(groupPosition);
-                else return true;
+                else return true;*/
 
-                //   if (menuModel.isGroup()) {
+                if (menuModel.isGroup()) {
 
 
-                //  if (!menuModel.isHasChildren()) {
+                    if (!menuModel.isHasChildren()) {
 
-                       /*switch (id_int) {
+                        switch (id_int) {
                            case 0:
-                               //startActivity(new Intent(NavActivity.this, UserProfile.class));
+                               startActivity(new Intent(NavActivity.this, ProfileActivity.class));
                                break;
                            case 1: //startActivity(new Intent(AppHomePage.this, MyAddressHomePage.class));
                                //  delay(new UserProfile());
+
                                break;
                            case 2: //startActivity(new Intent(AppHomePage.this,MekCoinsWallet.class));break;
                                break;
@@ -443,12 +473,16 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
                                break;
                            case 8: //startActivity(new Intent(AppHomePage.this, AboutUsPage.class));
                                // mSession.logoutUser();
-                               CheckinActivity.this.finish();
+                               NavActivity.this.finish();
                                break;
-                       }*/
-                //  CheckinActivity.this.onBackPressed();
-                //   }
-                //  }
+                        }
+
+                    }
+                    return expandableListView.isGroupExpanded(groupPosition) ? expandableListView.collapseGroup(groupPosition) : expandableListView.expandGroup(groupPosition);
+
+                }
+                NavActivity.this.onBackPressed();
+                return false;
 
 
             }
@@ -462,6 +496,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
 
                     if (groupPosition == 1) {
+
                         switch (childPosition) {
                             case 0:
 
@@ -479,8 +514,7 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
                                 break;
                         }
                     }
-
-                    CheckinActivity.this.onBackPressed();
+                    NavActivity.this.onBackPressed();
 
                 }
 
@@ -514,6 +548,11 @@ public class CheckinActivity extends AppCompatActivity implements NavigationView
 
             }
         }, 250);
+    }
+
+    public void hideTab(TabLayout tabLayout) {
+        tabLayout.setVisibility(View.GONE);
+
     }
 }
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
-    tools:context=".Profile"
+    tools:context=".Activities.ProfileActivity"
     android:background="@color/white"
     >
 
@@ -19,23 +19,17 @@
            android:orientation="vertical"
            android:layout_height="match_parent">
 
-           <LinearLayout
-               android:layout_width="match_parent"
+       <LinearLayout
+           android:layout_width="match_parent"
 
-               android:padding="15dp"
-               android:layout_marginTop="5dp"
+           android:padding="15dp"
+           android:layout_marginTop="5dp"
 
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
+           android:layout_height="wrap_content">
 
-               <ImageView
-                   android:layout_width="20dp"
-                   android:layout_height="20dp"></ImageView>
-
-
-
-
-
+           <ImageView
+               android:layout_width="20dp"
+               android:layout_height="20dp" />
 
 
            <LinearLayout
@@ -48,7 +42,6 @@
                    android:layout_width="60dp"
                    android:layout_height="60dp"
                    android:src="@drawable/photu_person"/>
-
 
 
                <LinearLayout
@@ -78,8 +71,8 @@
                </LinearLayout>
 
 
-
            </LinearLayout>
+       </LinearLayout>
 
            <View
 
@@ -87,8 +80,7 @@
 
                android:layout_height="1dp"
                android:background="@color/chart_light_grey"
-               android:layout_width="match_parent"
-               >
+               android:layout_width="match_parent">
 
 
            </View>
@@ -113,6 +105,7 @@
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
+
                    <ImageView
                        android:layout_gravity="center"
                        android:layout_width="18dp"
@@ -149,12 +142,10 @@
 
                    android:layout_height="1dp"
                    android:background="@color/chart_light_grey"
-                   android:layout_width="match_parent"
-                   >
+                   android:layout_width="match_parent">
 
 
                </View>
-
 
 
                <TextView
@@ -172,6 +163,7 @@
                    android:paddingTop="8dp"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
+
                    <ImageView
                        android:layout_marginTop="2dp"
                        android:layout_width="18dp"
@@ -201,6 +193,7 @@
 
                        />
                </LinearLayout>
+
                <View
 
                    android:layout_marginTop="16dp"
@@ -209,12 +202,10 @@
 
                    android:layout_height="1dp"
                    android:background="@color/chart_light_grey"
-                   android:layout_width="match_parent"
-                   >
+                   android:layout_width="match_parent">
 
 
                </View>
-
 
 
                <TextView
@@ -232,6 +223,7 @@
 
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
+
                    <ImageView
                        android:layout_marginTop="2dp"
                        android:layout_width="18dp"
@@ -249,8 +241,7 @@
                        android:fontFamily="@font/mont_semibold"
                        android:text="myemail123@id.com"
                        android:textColor="@color/black"
-                       android:textSize="14sp"
-                        />
+                       android:textSize="14sp" />
 
 
                    <androidx.appcompat.widget.AppCompatImageView
@@ -265,6 +256,7 @@
 
                        />
                </LinearLayout>
+
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -276,9 +268,7 @@
                    android:layout_marginTop="20dp"/>
 
 
-
                <TextView
-
 
 
                    android:layout_width="wrap_content"
@@ -291,8 +281,7 @@
 
                <LinearLayout
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   >
+                   android:layout_height="wrap_content">
 
                    <EditText
                        android:layout_marginTop="3dp"
@@ -303,6 +292,7 @@
 
                        android:textColor="@color/black"
                        android:text="filename.pdf"/>
+
                    <ImageView
                        android:layout_marginLeft="90dp"
                        android:layout_width="14dp"
@@ -320,7 +310,6 @@
                        android:layout_gravity="center" />
 
 
-
                </LinearLayout>
 
 
@@ -331,13 +320,12 @@
                    android:layout_marginBottom="12dp"
                    android:layout_height="1dp"
                    android:background="@color/chart_light_grey"
-                   android:layout_width="match_parent"
-                   >
+                   android:layout_width="match_parent">
 
 
                </View>
-               <TextView
 
+               <TextView
 
 
                    android:layout_width="wrap_content"
@@ -350,8 +338,8 @@
 
                <LinearLayout
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   >
+                   android:layout_height="wrap_content">
+
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -360,6 +348,7 @@
 
                        android:textColor="@color/black"
                        android:text="filename.doc"/>
+
                    <ImageView
                        android:layout_marginLeft="65dp"
                        android:layout_width="14dp"
@@ -370,7 +359,6 @@
                        android:src="@drawable/attach_icon"/>
 
 
-
                </LinearLayout>
 
                <View
@@ -379,22 +367,13 @@
 
                    android:layout_height="1dp"
                    android:background="@color/chart_light_grey"
-                   android:layout_width="match_parent"
-                   >
+                   android:layout_width="match_parent">
 
 
                </View>
 
 
-
-
-
-
-
-
            </LinearLayout>
-
-
 
 
            <FrameLayout
@@ -413,8 +392,7 @@
                    android:fontFamily="@font/mont_med"
                    android:textColor="@color/white"
                    android:background="@drawable/button_bg"
-                   android:backgroundTint="@color/red_button"
-                   />
+                   android:backgroundTint="@color/red_button" />
 
            </FrameLayout>
 

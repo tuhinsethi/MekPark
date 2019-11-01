@@ -2,13 +2,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ErrorActivity"
-    android:layout_margin="16dp">
+    android:layout_height="wrap_content"
+    tools:context=".Activities.ErrorActivity"
+
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
 
         >
 
@@ -174,26 +177,31 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_box"
                 android:layout_below="@id/ll2"
-                android:hint="Notes if any..\n\n\n\n\n"
+                android:hint="Notes if any..\n\n\n\n"
                 android:gravity="top|left"
                 android:id="@+id/notes"
                 android:inputType="textMultiLine"
                 android:layout_marginTop="20dp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:text="Submit &amp; Start Parking"
-                android:background="@drawable/button_bg"
-                android:backgroundTint="@color/red_button"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/notes"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
-                android:fontFamily="@font/mont_reg" />
 
         </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red_button"
+            android:fontFamily="@font/mont_reg"
+
+            android:text="Submit &amp; Start Parking"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_below="@id/part2"
+            android:id="@+id/submit"
+
+
+            />
 
 
     </RelativeLayout>

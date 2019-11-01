@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="start"
+    android:id="@+id/nv"
+    app:itemTextAppearance="@style/NavListItem"
+    app:headerLayout="@layout/header"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+            android:background="@android:color/white"
+            android:divider="@null"
+            android:groupIndicator="@null" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/faqs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="FAQs"
+            android:textSize="10sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="Send Feedback"
+            android:textSize="10sp"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+
+
+</com.google.android.material.navigation.NavigationView>

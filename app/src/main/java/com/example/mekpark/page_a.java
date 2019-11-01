@@ -1,8 +1,8 @@
 package com.example.mekpark;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class page_a extends AppCompatActivity {
 
