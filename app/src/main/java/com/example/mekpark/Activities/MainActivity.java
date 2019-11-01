@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
 import com.example.mekpark.error_report;
+import com.example.mekpark.parking_cancelled;
+import com.example.mekpark.parkingcompleted;
 import com.example.mekpark.reciept;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, error_report.class);
         startActivity(i);
 
+    }
+
+    public void onCancelled(View v){
+        Intent i = new Intent(MainActivity.this, parking_cancelled.class);
+        startActivity(i);
     }
 
     public void OnEnter(View v){
@@ -62,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onParkingComplete(View v){
 
-        Intent i = new Intent(MainActivity.this,parkingcompleted.class);
+        Intent i = new Intent(MainActivity.this, parkingcompleted.class);
         startActivity(i);
 
     }
