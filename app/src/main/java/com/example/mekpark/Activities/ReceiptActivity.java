@@ -1,8 +1,10 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mekpark.R;
 
 public class ReceiptActivity extends AppCompatActivity {
 

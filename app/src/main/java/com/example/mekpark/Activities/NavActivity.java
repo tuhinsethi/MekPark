@@ -125,6 +125,8 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                 }
             }
         });
+        viewPager = findViewById(R.id.viewpager);
+        tabLayout = findViewById(R.id.tabs);
         NavigationView navigationView = findViewById(R.id.nv);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
@@ -202,6 +204,7 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
 //                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
                     // startActivity(new Intent(NavActivity.this, AwaitingActivity.class));
                     try {
+                        hideTab(tabLayout);
                         Fragment fragment = Checkin.class.newInstance();
                         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -451,6 +454,7 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                                break;
                            case 1: //startActivity(new Intent(AppHomePage.this, MyAddressHomePage.class));
                                //  delay(new UserProfile());
+
                                break;
                            case 2: //startActivity(new Intent(AppHomePage.this,MekCoinsWallet.class));break;
                                break;
@@ -474,6 +478,8 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                         }
 
                     }
+                    return expandableListView.isGroupExpanded(groupPosition) ? expandableListView.collapseGroup(groupPosition) : expandableListView.expandGroup(groupPosition);
+
                 }
                 NavActivity.this.onBackPressed();
                 return false;
@@ -490,6 +496,7 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
 
 
                     if (groupPosition == 1) {
+
                         switch (childPosition) {
                             case 0:
 
@@ -507,7 +514,6 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                                 break;
                         }
                     }
-
                     NavActivity.this.onBackPressed();
 
                 }
@@ -542,6 +548,11 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
 
             }
         }, 250);
+    }
+
+    public void hideTab(TabLayout tabLayout) {
+        tabLayout.setVisibility(View.GONE);
+
     }
 }
 

@@ -3,40 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".completion">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.CompletionActivity"
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/imgBackArrow"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
 
-        android:src="@drawable/back_arrow"
-        android:layout_margin="20dp"
-        android:layout_alignParentStart="true"
-
-        />
-
-    <View
-        android:layout_width="match_parent"
-
-        android:layout_height="1dp"
-        android:layout_marginTop="55dp"
-        android:id="@+id/view1"
-        android:background="@color/chart_light_grey"
-        ></View>
 
     <LinearLayout
-        android:layout_below="@id/view1"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/home_background"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         >
-        <ImageView
-            android:src="@drawable/greentick"
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            app:srcCompat="@drawable/greentick"
             android:layout_width="30dp"
             android:layout_gravity="center"
-            android:layout_marginTop="200dp"
+
 
             android:layout_height="30dp" />
         <TextView
@@ -54,20 +42,8 @@
         android:layout_gravity="center"
         android:textColor="@color/grey_white"
         android:fontFamily="@font/mont_reg"
-        android:text="Our representatives will pick your vehicle "
+            android:text="Our representatives will pick your vehicle \nat given date and time"
         android:layout_marginTop="30dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/grey_white"
-            android:fontFamily="@font/mont_reg"
-            android:text="at given date and time "
-
-
-
-
-            />
 
         <Button
             android:layout_marginTop="30dp"

@@ -26,6 +26,7 @@ public class OTP_Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_otp, container, false);
         Button enter = root.findViewById(R.id.enter);
+
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

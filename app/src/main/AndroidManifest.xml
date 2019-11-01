@@ -9,13 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Activities.LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activities.OpenActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.CompletionActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.FeedbackActivity"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Activities.AwaitingActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ReceiptActivity" />
+        <activity android:name=".Activities.ReceiptActivity" />
         <activity
             android:name=".Activities.ErrorActivity"
             android:theme="@style/AppTheme" />
@@ -30,11 +43,7 @@
             android:name=".Activities.NavActivity"
             android:theme="@style/NoActionBar" />
         <activity android:name=".Activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

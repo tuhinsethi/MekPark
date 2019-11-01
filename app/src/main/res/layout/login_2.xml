@@ -19,7 +19,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/back_arrow"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:id="@+id/red_arrow" />
 
     <ImageView
         android:layout_width="20dp"

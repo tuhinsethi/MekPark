@@ -8,8 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
-import com.example.mekpark.completion;
-import com.example.mekpark.feedback;
+import com.example.mekpark.error_report;
 import com.example.mekpark.reciept;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFeedback(View v){
 
-        Intent i = new Intent(MainActivity.this, feedback.class);
+        Intent i = new Intent(MainActivity.this, FeedbackActivity.class);
         startActivity(i);
 
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void onComplete(View v){
-        Intent i = new Intent(MainActivity.this, completion.class);
+        Intent i = new Intent(MainActivity.this, CompletionActivity.class);
         startActivity(i);
 
 
