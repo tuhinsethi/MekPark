@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".parkingcompleted">
+    tools:context=".Activities.ParkingStatusActivity">
 
 
     <RelativeLayout

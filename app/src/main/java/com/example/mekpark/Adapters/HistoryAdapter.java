@@ -1,6 +1,7 @@
 package com.example.mekpark.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mekpark.Activities.ParkingStatusActivity;
 import com.example.mekpark.ModelClass;
 import com.example.mekpark.R;
 
@@ -31,7 +33,12 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
 
     @Override
     public void onBindViewHolder(@NonNull HistoryHolder holder, int position) {
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.getContext().startActivity(new Intent(view.getContext(), ParkingStatusActivity.class));
+            }
+        });
     }
 
     @Override

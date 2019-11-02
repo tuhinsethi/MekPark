@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.ReceiptActivity"
-    android:layout_margin="16dp">
+
+    android:background="@color/white">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_box">
+        android:background="@drawable/edittext_box"
+        android:layout_margin="16dp">
 
         <include layout="@layout/receipt" />
     </FrameLayout>
@@ -21,6 +23,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/red_button"
         android:fontFamily="@font/got_med"
