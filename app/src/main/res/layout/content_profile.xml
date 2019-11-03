@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Activities.ProfileActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/light_background">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -14,8 +13,6 @@
         android:paddingBottom="20dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:orientation="vertical"
-
-        android:background="@color/light_background"
         android:layout_margin="16dp">
 
 
@@ -71,10 +68,10 @@
 
         <View
 
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="10dp"
 
             android:layout_height="1dp"
-            android:background="@color/light_background"
+            android:background="@color/chart_light_grey"
             android:layout_width="match_parent">
 
 
