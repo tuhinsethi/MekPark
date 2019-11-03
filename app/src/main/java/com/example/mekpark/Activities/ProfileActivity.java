@@ -1,27 +1,23 @@
 package com.example.mekpark.Activities;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.BulletSpan;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.mekpark.R;
+import com.skydoves.balloon.ArrowOrientation;
+import com.skydoves.balloon.Balloon;
+import com.skydoves.balloon.OnBalloonClickListener;
+import com.skydoves.balloon.OnBalloonOutsideTouchListener;
 
 public class ProfileActivity extends AppCompatActivity {
-
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +25,41 @@ public class ProfileActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_arrow);
+
+        imageView = findViewById(R.id.info);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Balloon balloon = new Balloon.Builder(getBaseContext())
+                        .setArrowSize(10)
+                        .setArrowOrientation(ArrowOrientation.TOP)
+                        .setArrowVisible(true)
+                        .setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.white))
+                        .setWidthRatio(0.6f)
+
+                        .setHeight(80)
+                        // .setTextSize(15f)
+                        .setArrowPosition(0.81f)
+                        .setCornerRadius(4f)
+                        .setLayout(R.layout.popup)
+                        .setLifecycleOwner(ProfileActivity.this)
+                        .build();
+
+                balloon.showAlignTop(imageView);
+                balloon.setOnBalloonClickListener(new OnBalloonClickListener() {
+                    @Override
+                    public void onBalloonClick(View view) {
+                        balloon.dismiss();
+                    }
+                });
+                balloon.setOnBalloonOutsideTouchListener(new OnBalloonOutsideTouchListener() {
+                    @Override
+                    public void onBalloonOutsideTouch(View view, MotionEvent motionEvent) {
+                        balloon.dismiss();
+                    }
+                });
+            }
+        });
 
     }
 
@@ -41,39 +72,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
 
-    public void showPopUp(View v) {
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup, null);
-        TextView first = popupView.findViewById(R.id.text1);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            SpannableString string = new SpannableString("\n5 coins will be charged for one call \n 3 coins will be charged for one sms");
-
-            string.setSpan(new BulletSpan(0, Color.YELLOW, 2), 0, 0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            first.setText(string);
-        }
-
-
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
-        popupWindow.showAtLocation(v, Gravity.BOTTOM, 30, 200);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
-        });
-
-    }
 
 }

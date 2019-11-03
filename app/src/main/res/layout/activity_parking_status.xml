@@ -43,7 +43,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/location"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 android:id="@+id/logo" />
 
             <LinearLayout
@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="2"
+                android:layout_marginTop="10dp"
 
 
                 >
