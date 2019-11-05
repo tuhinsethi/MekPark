@@ -8,8 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".parking_cancelled"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.VehicleChoose"></activity>
+        <activity android:name=".MyVehicles" />
+        <activity
+            android:name=".handsfreeAccess"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".parking_cancelled" />
         <activity android:name=".Activities.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +48,7 @@
         <activity
             android:name=".Activities.NavActivity"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".Activities.MainActivity"></activity>
+        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>
