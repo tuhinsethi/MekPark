@@ -1,138 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:orientation="vertical"
     tools:context=".Activities.ProfileActivity"
-    android:background="@color/white"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-
-        android:padding="15dp"
-        android:layout_marginTop="5dp"
-
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="16dp"
-
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/photu_person"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hi"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/mont_bold"
-
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MekPark!"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/mont_bold"
-
-                    android:textSize="20sp"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <View
-
-        android:layout_marginTop="1dp"
-
-        android:layout_height="1dp"
-        android:background="@color/chart_light_grey"
-        android:layout_width="match_parent">
-
-
-    </View>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_background"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:paddingBottom="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
 
-        <TextView
-
-            android:layout_marginLeft="28dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@color/app_caption_dark_grey"
-            android:fontFamily="@font/mont_reg"
-            android:textSize="10sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
+
+
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/profile_dummy"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
 
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:layout_height="wrap_content">
 
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:fontFamily="@font/mont_semibold"
-                android:text="Mr. MekPark"
-                android:paddingLeft="10dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/photu_person"/>
 
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:orientation="vertical">
 
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/greytick"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hi"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/mont_bold"
 
-                />
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MekPark!"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/mont_bold"
+
+                        android:textSize="20sp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
         </LinearLayout>
 
         <View
 
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
 
             android:layout_height="1dp"
             android:background="@color/chart_light_grey"
@@ -141,264 +77,338 @@
 
         </View>
 
-
-        <TextView
-
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="28dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mobile Number"
-            android:textColor="@color/app_caption_dark_grey"
-            android:fontFamily="@font/mont_reg"
-            android:textSize="10sp"/>
-
         <LinearLayout
-            android:paddingTop="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
 
-            <ImageView
-                android:layout_marginTop="2dp"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/mobile_icon"
-                android:layout_gravity="center" />
 
-            <EditText
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+
+                android:layout_marginLeft="28dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:text="Name"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_reg"
+                android:textSize="10sp"/>
 
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:fontFamily="@font/mont_semibold"
-                android:text="+91-8867714446"
-                android:paddingLeft="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-
-                app:srcCompat="@drawable/greytick"
-                android:layout_gravity="center"
-
-
-                />
-        </LinearLayout>
-
-        <View
-
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/profile_dummy"/>
 
 
-            android:layout_height="1dp"
-            android:background="@color/chart_light_grey"
-            android:layout_width="match_parent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/mont_semibold"
+                    android:text="Mr. MekPark"
+                    android:paddingLeft="10dp"/>
 
 
-        </View>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/greytick"
+
+                    />
+            </LinearLayout>
+
+            <View
+
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+
+                android:layout_height="1dp"
+                android:background="@color/chart_light_grey"
+                android:layout_width="match_parent">
 
 
-        <TextView
-
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="28dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="e-mail id"
-            android:textColor="@color/app_caption_dark_grey"
-            android:fontFamily="@font/mont_reg"
-            android:textSize="10sp"/>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_marginTop="2dp"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/email_icon"
-                android:layout_gravity="center" />
+            </View>
 
 
-            <EditText
+            <TextView
+
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="28dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:layout_weight="1"
+                android:text="Mobile Number"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_reg"
+                android:textSize="10sp"/>
 
-                android:fontFamily="@font/mont_semibold"
-                android:text="myemail123@id.com"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+            <LinearLayout
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/mobile_icon"
+                    android:layout_gravity="center" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
 
-
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-
-                app:srcCompat="@drawable/greytick"
-                android:layout_gravity="center"
-
-
-                />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valid to:"
-
-            android:textColor="@color/dark_grey_button"
-            android:fontFamily="@font/mont_semibold"
-            android:textSize="16sp"
-            android:layout_marginTop="20dp"/>
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/mont_semibold"
+                    android:text="+91-8867714446"
+                    android:paddingLeft="10dp"/>
 
 
-        <TextView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+
+                    app:srcCompat="@drawable/greytick"
+                    android:layout_gravity="center"
 
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RC number"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/app_caption_dark_grey"
-            android:fontFamily="@font/mont_reg"
-            android:textSize="10sp"/>
+                    />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <View
 
-            <EditText
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+
+
+                android:layout_height="1dp"
+                android:background="@color/chart_light_grey"
+                android:layout_width="match_parent">
+
+
+            </View>
+
+
+            <TextView
+
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="28dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/mont_semibold"
-                android:textSize="14sp"
+                android:text="e-mail id"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_reg"
+                android:textSize="10sp"/>
 
-                android:textColor="@color/black"
-                android:text="filename.pdf"/>
+            <LinearLayout
 
-            <ImageView
-                android:layout_marginLeft="90dp"
-                android:layout_width="14dp"
-                android:layout_weight="1"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                android:layout_height="16dp"
-                android:src="@drawable/attach_icon"/>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-
-                app:srcCompat="@drawable/greentick"
-                android:layout_gravity="center" />
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/email_icon"
+                    android:layout_gravity="center" />
 
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+
+                    android:fontFamily="@font/mont_semibold"
+                    android:text="myemail123@id.com"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
 
-        <View
-
-            android:layout_marginTop="12dp"
-
-            android:layout_marginBottom="12dp"
-            android:layout_height="1dp"
-            android:background="@color/chart_light_grey"
-            android:layout_width="match_parent">
+                <androidx.appcompat.widget.AppCompatImageView
 
 
-        </View>
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
 
-        <TextView
+                    app:srcCompat="@drawable/greytick"
+                    android:layout_gravity="center"
 
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Verification Doc."
-
-            android:textColor="@color/dark_grey_button"
-            android:fontFamily="@font/mont_reg"
-            android:textSize="10sp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Valid to:"
+
+                android:textColor="@color/dark_grey_button"
                 android:fontFamily="@font/mont_semibold"
                 android:textSize="16sp"
-
-                android:textColor="@color/black"
-                android:text="filename.doc"/>
-
-            <ImageView
-                android:layout_marginLeft="65dp"
-                android:layout_width="14dp"
-                android:layout_weight="1"
+                android:layout_marginTop="20dp"/>
 
 
-                android:layout_height="16dp"
-                android:src="@drawable/attach_icon"/>
+            <TextView
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RC number"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/app_caption_dark_grey"
+                android:fontFamily="@font/mont_reg"
+                android:textSize="10sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_semibold"
+                    android:textSize="14sp"
+
+                    android:textColor="@color/black"
+                    android:text="filename.pdf"/>
+
+                <ImageView
+                    android:layout_marginLeft="90dp"
+                    android:layout_width="14dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+
+                    android:layout_height="16dp"
+                    android:src="@drawable/attach_icon"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+
+                    app:srcCompat="@drawable/greentick"
+                    android:layout_gravity="center" />
+
+
+            </LinearLayout>
+
+
+            <View
+
+                android:layout_marginTop="12dp"
+
+                android:layout_marginBottom="12dp"
+                android:layout_height="1dp"
+                android:background="@color/chart_light_grey"
+                android:layout_width="match_parent">
+
+
+            </View>
+
+            <TextView
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification Doc."
+
+                android:textColor="@color/dark_grey_button"
+                android:fontFamily="@font/mont_reg"
+                android:textSize="10sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_semibold"
+                    android:textSize="16sp"
+
+                    android:textColor="@color/black"
+                    android:text="filename.doc"/>
+
+                <ImageView
+                    android:layout_marginLeft="65dp"
+                    android:layout_width="14dp"
+                    android:layout_weight="1"
+
+
+                    android:layout_height="16dp"
+                    android:src="@drawable/attach_icon"/>
+
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_marginTop="16dp"
+
+                android:layout_height="1dp"
+                android:background="@color/chart_light_grey"
+                android:layout_width="match_parent">
+
+
+            </View>
 
 
         </LinearLayout>
 
-        <View
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alert_icon"
+            android:layout_gravity="end"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:id="@+id/info"
+            android:layout_marginTop="16dp" />
 
-            android:layout_marginTop="16dp"
 
-            android:layout_height="1dp"
-            android:background="@color/chart_light_grey"
-            android:layout_width="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="70dp"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You cannot access the full benefits of the app until your id is verified"
+                android:textSize="10sp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/text" />
 
 
-        </View>
+            <Button
+                android:layout_below="@id/text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Done"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/mont_med"
+                android:textColor="@color/white"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/red_button" />
+
+        </RelativeLayout>
 
 
     </LinearLayout>
-
-
-    <FrameLayout
-        android:layout_marginTop="50dp"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content">
-
-        <Button
-
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Done"
-            android:textAllCaps="false"
-            android:fontFamily="@font/mont_med"
-            android:textColor="@color/white"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@color/red_button" />
-
-    </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+</ScrollView>

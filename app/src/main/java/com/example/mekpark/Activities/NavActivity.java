@@ -218,6 +218,7 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
 
                     return true;
                 case R.id.navigation_location:
+                    startActivity(new Intent(NavActivity.this, LocationHistActivity.class));
                     //toolbar.setTitle("My Gifts");
                     return true;
                 // case R.id.navigation_sm:

@@ -14,14 +14,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Parking Completed"
+            android:text="Parking in progress"
             android:paddingLeft="16dp"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:textSize="12sp"
             android:textColor="@color/white"
             android:fontFamily="@font/gotham_med"
-            android:background="@color/green"
+            android:background="@color/yellow2"
             android:id="@+id/status1" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -141,12 +141,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment Confirmed"
-                    android:drawableRight="@drawable/greentick"
-                    android:drawablePadding="10dp"
-                    android:textColor="@color/green"
+                    android:text="#MekPark10"
+
+                    android:textColor="@color/grey_white"
                     android:layout_marginTop="30dp"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:fontFamily="@font/mont_semibold"
 
                     android:id="@+id/pay_status" />
@@ -162,26 +161,23 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="20dp">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/qr_small"
+                    android:layout_gravity="end" />
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="#Mekpark10"
-                    android:textSize="10sp"
-                    android:fontFamily="@font/mont_reg" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
 
 
                     android:text="Call"
                     android:textSize="10sp"
 
                     android:drawableTop="@drawable/green_phone"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:textColor="@color/grey_white"
 
                     android:layout_marginRight="16dp"
@@ -207,7 +203,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_below="@id/ll1"
-            android:id="@+id/ll3">
+            android:id="@+id/ll3"
+            android:layout_marginLeft="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -220,7 +217,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Park IN Time      :"
+                    android:text="Parking Date     :"
                     android:fontFamily="@font/gotham_med"
                     android:textSize="12sp"
                     android:textColor="@color/black" />
@@ -248,7 +245,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fare Details        :"
+                    android:text="Parking Time    :"
                     android:fontFamily="@font/gotham_med"
                     android:textSize="12sp"
                     android:textColor="@color/black" />
@@ -276,7 +273,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Duration              :"
+                    android:text="Duration            :"
                     android:fontFamily="@font/gotham_med"
                     android:textSize="12sp"
                     android:textColor="@color/black" />
@@ -294,164 +291,40 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Payment Details"
-            android:layout_below="@id/ll3"
-            android:layout_margin="16dp"
-            android:fontFamily="@font/mont_semibold"
-            android:id="@+id/tv_details" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_below="@id/tv_details"
-            android:id="@+id/ll4"
-            android:background="@drawable/edittext_box"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:paddingBottom="16dp">
+            android:id="@+id/rem_time"
+            android:layout_below="@id/ll3"
+            android:layout_marginTop="20dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:weightSum="3"
-                android:paddingLeft="20dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Sub Total"
-                    android:fontFamily="@font/gotham_med"
-                    android:textSize="12sp"
-                    android:textColor="@color/light_black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="\u20B9 3200"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:weightSum="3"
-                android:layout_marginLeft="20dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Tax"
-                    android:fontFamily="@font/gotham_med"
-                    android:textSize="12sp"
-                    android:textColor="@color/light_black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="\u20B9 200"
-                    android:textStyle="bold"
-
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:weightSum="3"
-                android:layout_marginLeft="20dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Additional Charges*"
-                    android:fontFamily="@font/gotham_med"
-                    android:textSize="12sp"
-                    android:textColor="@color/light_black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="\u20B9 100"
-                    android:textStyle="bold"
-
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:weightSum="3"
-                android:layout_marginLeft="20dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Total"
-                    android:fontFamily="@font/gotham_med"
-                    android:textSize="12sp"
-                    android:textColor="@color/light_black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="\u20B9 200"
-                    android:textStyle="bold"
-
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="*This place is reserved till 10.00 p.m 23/12/19"
-                android:textSize="10sp"
-                android:layout_marginTop="10dp"
+                android:src="@drawable/clock"
+                android:layout_gravity="center" />
 
-                android:fontFamily="@font/mont_reg" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:15 min left in 2 hrs"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/red_button"
+                android:fontFamily="@font/mont_semibold"
+
+                android:gravity="center" />
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_below="@id/ll4"
+            android:layout_below="@id/rem_time"
+
 
             android:layout_marginBottom="8dp"
             android:layout_alignParentBottom="true">
@@ -460,28 +333,30 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="Book Again"
+                android:text="Parking Complete"
                 android:textAllCaps="false"
-                android:fontFamily="@font/mont_med"
+                android:fontFamily="@font/mont_semibold"
                 android:background="@drawable/button_bg"
                 android:backgroundTint="@color/red_button"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="12sp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="8dp"
+                android:id="@+id/complete" />
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:text="Print Receipt"
-                android:fontFamily="@font/mont_med"
+                android:fontFamily="@font/mont_semibold"
                 android:textAllCaps="false"
                 android:background="@drawable/button_bg"
                 android:backgroundTint="@color/dark_grey_button"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:layout_marginRight="16dp" />
+                android:textSize="12sp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/receipt" />
 
         </LinearLayout>
 

@@ -8,10 +8,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
+import com.example.mekpark.ReceiptActivity;
 import com.example.mekpark.error_report;
 import com.example.mekpark.parking_cancelled;
-import com.example.mekpark.parkingcompleted;
-import com.example.mekpark.reciept;
 
 public class MainActivity extends AppCompatActivity {
     Button login;
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onReciept(View v){
 
-        Intent i = new Intent(MainActivity.this, reciept.class);
+        Intent i = new Intent(MainActivity.this, ReceiptActivity.class);
         startActivity(i);
     }
     public void onComplete(View v){
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onParkingComplete(View v){
 
-        Intent i = new Intent(MainActivity.this, parkingcompleted.class);
+        Intent i = new Intent(MainActivity.this, ParkingStatusActivity.class);
         startActivity(i);
 
     }

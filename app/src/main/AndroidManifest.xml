@@ -5,14 +5,16 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="MekPark"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activities.VehicleChoose"></activity>
-        <activity android:name=".MyVehicles" />
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".handsfreeAccess"
+            android:name=".Activities.LocationHistActivity"
+            android:label="Location History"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Activities.ProgressParking"
             android:theme="@style/AppTheme" />
         <activity android:name=".parking_cancelled" />
         <activity android:name=".Activities.LauncherActivity">
@@ -22,25 +24,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activities.OpenActivity"
+            android:label=""
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.CompletionActivity"
+            android:label=""
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.FeedbackActivity"
-            android:theme="@style/NoActionBar" />
+            android:label="Feedback"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.AwaitingActivity"
+            android:label=""
             android:theme="@style/AppTheme" />
-        <activity android:name=".Activities.ReceiptActivity" />
+        <activity
+            android:name=".Activities.ReceiptActivity"
+            android:label="Receipt"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.ErrorActivity"
+            android:label="Error Report"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ParkingStatusActivity"
+            android:label=""
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.ProfileActivity"
-            android:label="@string/title_activity_profile"
+            android:label="Profile"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.LoginActivity"
