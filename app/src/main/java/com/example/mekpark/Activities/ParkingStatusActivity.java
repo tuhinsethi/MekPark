@@ -26,7 +26,7 @@ public class ParkingStatusActivity extends AppCompatActivity {
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ParkingStatusActivity.this, ReceiptActivity.class));
+                startActivity(new Intent(ParkingStatusActivity.this, PrintReceiptActivity.class));
             }
         });
         Button book = findViewById(R.id.book);

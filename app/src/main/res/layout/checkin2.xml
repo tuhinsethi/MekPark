@@ -1,21 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activities.NavActivity"
-    android:id="@+id/open"
-    android:background="@color/white"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/rr"
+    android:background="@color/white"
+    tools:context=".Activities.OpenActivity">
 
-    <RelativeLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawer_layout"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".Activities.OpenActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_alignParentBottom="true"
+            android:layout_height="76dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll">
+
+                <!-- We use a Toolbar so that our drawer can be displayed
+                     in front of the action bar -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:minHeight="?attr/actionBarSize"
+
+                    />
+
+                <!-- The rest of your content view -->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="0dp"
+
+
+                    app:itemIconTint="@color/bottom_nav_col"
+                    app:labelVisibilityMode="unlabeled"
+                    app:menu="@menu/bot_nav_menu" />
+            </RelativeLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:id="@+id/qr"
+                    android:src="@drawable/qr"
+                    android:layout_gravity="bottom|center"
+                    style="?android:attr/imageButtonStyle"
+                    android:padding="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/photo_circle"
+                    android:clickable="true" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+
+
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false">
+
+
+                <RelativeLayout
 
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:paddingBottom="30dp">
+                    android:paddingBottom="100dp"
+                    android:id="@+id/rr1">
 
 
         <TextView
@@ -79,5 +171,14 @@
 
 
 </RelativeLayout>
-</ScrollView>
+
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <include layout="@layout/nav" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
+
 

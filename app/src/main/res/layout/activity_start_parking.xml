@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activities.AwaitingActivity"
-    android:background="@color/white"
-    android:layout_gravity="center"
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <RelativeLayout
+    tools:context=".Activities.AwaitingParkingActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -21,9 +15,18 @@
             layout="@layout/car_desc_common"
             android:id="@+id/common" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll"
+        android:layout_below="@id/common"
+        android:layout_marginTop="20dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:fontFamily="@font/mont_reg"
             android:text="Confirm license plate number on the screen"
             android:textColor="@color/black"
@@ -31,27 +34,27 @@
             android:textStyle="bold"
             android:layout_below="@id/common"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+
             android:id="@+id/tv_common"
 
             />
 
         <Button
+            android:id="@+id/btn_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:background="@drawable/green_circ"
             android:fontFamily="@font/gotham_med"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             android:text="Start Parking"
             android:textAllCaps="false"
-            android:textColor="@color/home_background"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:layout_below="@id/tv_common"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:id="@+id/btn_start" />
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-        <TextView
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sub_err"
@@ -59,9 +62,10 @@
             android:text="*License plate number does not match? \n\nSubmit error report"
             android:textColor="@color/app_grey_headline_caption"
             android:textSize="10sp"
-            android:layout_below="@id/btn_start"
+
             android:layout_marginTop="30dp"
             android:layout_margin="16dp"
+        android:layout_above="@id/btn_err"
 
             />
 
@@ -77,13 +81,11 @@
             android:text="Submit Error"
             android:textAllCaps="false"
             android:textColor="@color/home_background"
-            android:layout_below="@id/sub_err"
+            android:layout_margin="16dp"
             android:id="@+id/btn_err"
             android:layout_centerHorizontal="true"
 
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="50dp" />
+            android:layout_alignParentBottom="true" />
 
 
     </RelativeLayout>
-</ScrollView>

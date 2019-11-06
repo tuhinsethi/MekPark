@@ -9,18 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
 
-public class ReceiptActivity extends AppCompatActivity {
-    Button pay;
+public class StopParkingActivity extends AppCompatActivity {
+    Button stop;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reciept);
+        setContentView(R.layout.activity_stop_parking);
 
-        pay = findViewById(R.id.pay_btn);
-        pay.setOnClickListener(new View.OnClickListener() {
+        stop = findViewById(R.id.btn_stop);
+        stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ReceiptActivity.this, CheckoutActivity.class));
+                startActivity(new Intent(StopParkingActivity.this, ReceiptActivity.class));
             }
         });
     }

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReceiptActivity"
+    tools:context=".Activities.ReceiptActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
     android:background="@color/red_button"
-    android:orientation="vertical"
+
 
 
     >
@@ -222,7 +230,8 @@
                     android:textSize="20sp"
                     android:fontFamily="@font/mont_semibold"
                     android:textColor="@color/red_button"
-                    android:background="@drawable/button_edges_whiteback"/>
+                    android:background="@drawable/button_edges_whiteback"
+                    android:id="@+id/pay_btn" />
 
 
             </RelativeLayout>
@@ -234,3 +243,5 @@
     </ScrollView>
 
 </RelativeLayout>
+</ScrollView>
+

@@ -24,7 +24,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.mekpark.Adapters.ExpandableListAdapter;
-import com.example.mekpark.Fragments.Checkin;
 import com.example.mekpark.Fragments.HistoryFragment;
 import com.example.mekpark.Fragments.NewFragment;
 import com.example.mekpark.Fragments.OngoingFragment;
@@ -202,8 +201,8 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                 case R.id.navigation_home:
                     //toolbar.setTitle("Shop");
 //                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
-                    // startActivity(new Intent(NavActivity.this, AwaitingActivity.class));
-                    try {
+                    startActivity(new Intent(NavActivity.this, AwaitingParkingActivity.class));
+                   /* try {
                         hideTab(tabLayout);
                         Fragment fragment = Checkin.class.newInstance();
                         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -215,7 +214,7 @@ public class NavActivity extends AppCompatActivity implements NavigationView.OnN
                     } catch (InstantiationException e) {
                         e.printStackTrace();
                     }
-
+*/
                     return true;
                 case R.id.navigation_location:
                     startActivity(new Intent(NavActivity.this, LocationHistActivity.class));

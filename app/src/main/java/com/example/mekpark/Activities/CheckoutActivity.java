@@ -1,14 +1,16 @@
-package com.example.mekpark;
+package com.example.mekpark.Activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ReceiptActivity extends AppCompatActivity {
+import com.example.mekpark.R;
+
+public class CheckoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reciept);
+        setContentView(R.layout.checkout_pay);
     }
 }

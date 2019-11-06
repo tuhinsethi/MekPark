@@ -28,7 +28,7 @@ public class ProgressParking extends AppCompatActivity {
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProgressParking.this, ReceiptActivity.class));
+                startActivity(new Intent(ProgressParking.this, PrintReceiptActivity.class));
             }
         });
         complete = findViewById(R.id.complete);

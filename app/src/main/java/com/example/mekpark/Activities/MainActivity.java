@@ -8,8 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
-import com.example.mekpark.ReceiptActivity;
-import com.example.mekpark.error_report;
 import com.example.mekpark.parking_cancelled;
 
 public class MainActivity extends AppCompatActivity {

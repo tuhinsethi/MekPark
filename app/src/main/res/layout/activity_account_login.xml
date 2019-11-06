@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Activities.LoginActivity"
-    android:orientation="vertical"
+
         android:background="@color/home_background"
     >
 
@@ -18,7 +18,8 @@
             android:layout_height="16dp"
             android:layout_margin="16dp"
             android:src="@drawable/three_dots"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
 
 
         <ImageView
@@ -147,8 +148,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_height="1dp"
                 android:background="#c1cdc1"
-                android:layout_width="match_parent"
-                android:layout_weight="1">
+                android:layout_width="match_parent">
 
 
             </View>
@@ -157,7 +157,6 @@
             <LinearLayout
 
 
-                android:background="@color/home_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

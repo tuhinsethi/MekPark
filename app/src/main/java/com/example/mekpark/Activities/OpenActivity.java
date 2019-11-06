@@ -15,11 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import com.example.mekpark.Adapters.ExpandableListAdapter;
-import com.example.mekpark.Fragments.Checkin;
 import com.example.mekpark.MenuModel;
 import com.example.mekpark.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -51,7 +48,7 @@ public class OpenActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.toolbar);
 
 
-        // setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
 
@@ -146,8 +143,8 @@ public class OpenActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.navigation_home:
                     //toolbar.setTitle("Shop");
 //                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
-                    // startActivity(new Intent(NavActivity.this, AwaitingActivity.class));
-                    try {
+                    startActivity(new Intent(OpenActivity.this, AwaitingParkingActivity.class));
+                  /*  try {
                         Fragment fragment = Checkin.class.newInstance();
                         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -158,7 +155,7 @@ public class OpenActivity extends AppCompatActivity implements NavigationView.On
                     } catch (InstantiationException e) {
                         e.printStackTrace();
                     }
-
+*/
                     return true;
                 case R.id.navigation_location:
                     //toolbar.setTitle("My Gifts");

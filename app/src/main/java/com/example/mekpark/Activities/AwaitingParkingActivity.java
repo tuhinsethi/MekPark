@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mekpark.R;
 
-public class AwaitingActivity extends AppCompatActivity {
+public class AwaitingParkingActivity extends AppCompatActivity {
     Button reject;
     Button accept;
     FrameLayout frame;
@@ -38,7 +38,7 @@ public class AwaitingActivity extends AppCompatActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AwaitingActivity.this, NavActivity.class));
+                startActivity(new Intent(AwaitingParkingActivity.this, OpenActivity.class));
             }
         });
 

@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.mekpark.Activities.AwaitingActivity;
+import com.example.mekpark.Activities.AwaitingParkingActivity;
 import com.example.mekpark.Activities.ErrorActivity;
 import com.example.mekpark.R;
 
@@ -32,7 +32,7 @@ public class Checkin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this LoginFragment
-        View root = inflater.inflate(R.layout.activity_home, container, false);
+        View root = inflater.inflate(R.layout.activity_start_parking, container, false);
         error = root.findViewById(R.id.btn_err);
         error.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +51,7 @@ public class Checkin extends Fragment {
                 //  transaction.replace(R.id.replace, otp);
 
                 //  transaction.commit();
-                startActivity(new Intent(getActivity(), AwaitingActivity.class));
+                startActivity(new Intent(getActivity(), AwaitingParkingActivity.class));
             }
         });
         return root;

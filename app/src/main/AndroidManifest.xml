@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Activities.StopParkingActivity"></activity>
         <activity
             android:name=".Activities.LocationHistActivity"
             android:label="Location History"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.ProgressParking"
             android:theme="@style/AppTheme" />
@@ -24,11 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Activities.OpenActivity"
             android:label=""
-            android:theme="@style/AppTheme" />
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Activities.CompletionActivity"
             android:label=""
@@ -38,11 +38,11 @@
             android:label="Feedback"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Activities.AwaitingActivity"
+            android:name=".Activities.AwaitingParkingActivity"
             android:label=""
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Activities.ReceiptActivity"
+            android:name=".Activities.PrintReceiptActivity"
             android:label="Receipt"
             android:theme="@style/AppTheme" />
         <activity
