@@ -2,10 +2,8 @@
 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.ReceiptActivity">
+    android:layout_height="match_parent">
 
 
     <RelativeLayout
@@ -28,7 +26,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/red_button">
 
         <LinearLayout
             android:orientation="vertical"
@@ -153,13 +152,13 @@
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
                 android:layout_height="wrap_content">
                 <TableRow
 
-                    android:paddingTop="20dp"
-                    android:paddingBottom="10dp">
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
                     <TextView
                         android:text="parking duration"
                         android:textAllCaps="true"
@@ -184,7 +183,9 @@
                         android:text="Rs.100"
                         android:textColor="@color/white"/>
 
-                </TableRow> <TableRow
+                </TableRow>
+
+                <TableRow
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
                 <TextView
@@ -198,9 +199,9 @@
                     android:text="Rs.20"
                     android:textColor="@color/white"/>
 
-            </TableRow
+                </TableRow>
 
-                > <TableRow
+                <TableRow
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
                 <TextView
@@ -219,11 +220,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
                 <Button
-                    android:layout_margin="10dp"
+                    android:layout_margin="8dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentBottom="true"
                     android:text="Pay Amount"
                     android:textAllCaps="false"

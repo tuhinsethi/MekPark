@@ -132,7 +132,7 @@
                 android:paddingTop="30dp"
                 android:layout_gravity="end"
 
-                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:drawablePadding="10dp"
                 android:gravity="center" />
 

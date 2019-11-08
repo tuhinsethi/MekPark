@@ -26,6 +26,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Activities.CheckoutActivity"
+            android:theme="@style/AppTheme"
+            android:label="Checkout" />
+        <activity
             android:name=".Activities.OpenActivity"
             android:label=""
             android:theme="@style/NoActionBar" />

@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Wagonar R"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/mont_semibold"
 
 
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DL1PB3201"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:id="@+id/car_number"
                     android:layout_marginTop="10dp" />
 
@@ -130,7 +130,7 @@
                 android:drawableTop="@drawable/green_phone"
                 android:text="Call"
                 android:drawablePadding="5dp"
-                android:textSize="8sp"
+                android:textSize="14sp"
 
                 android:layout_alignParentEnd="true"
                 android:layout_marginRight="10dp"
@@ -151,13 +151,13 @@
             android:textColor="@color/yellow2"
             android:layout_marginTop="10dp"
             android:id="@+id/status"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:layout_below="@id/ll1"
             android:layout_marginLeft="24dp" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:text="Need Help?"
             android:layout_below="@id/status"
             android:textAllCaps="false"
@@ -168,7 +168,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:layout_marginBottom="8dp" />
     </RelativeLayout>
 

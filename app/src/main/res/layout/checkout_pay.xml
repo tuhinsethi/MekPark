@@ -4,44 +4,10 @@
     android:orientation="vertical"
     tools:context=".Activities.CheckoutActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/home_background">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imgBackArrow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-
-            android:src="@drawable/back_arrow"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_alignParentStart="true"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Checkout"
-            android:textColor="@color/black"
-            android:fontFamily="@font/mont_bold"
-            android:layout_marginTop="17dp"></TextView>
-    </LinearLayout>
-
-
-    <View
-        android:layout_width="match_parent"
-
-        android:layout_height="0.7dp"
-        android:layout_marginTop="15dp"
-        android:id="@+id/view1"
-        android:background="@color/chart_light_grey"></View>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,13 +23,13 @@
             android:textColor="@color/app_caption_dark_grey"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
-            android:fontFamily="@font/mont_semibold"></TextView>
+            android:fontFamily="@font/mont_semibold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="3,200"
+            android:text="\u20B9 3,200"
             android:textColor="@color/app_caption_dark_grey"
             android:fontFamily="@font/mont_bold"
             android:layout_alignParentEnd="true"
@@ -71,7 +37,7 @@
             android:layout_marginRight="30dp"
 
 
-            ></TextView>
+            />
 
     </RelativeLayout>
 
@@ -94,13 +60,13 @@
             android:textColor="@color/black"
             android:textSize="14sp"
 
-            ></TextView>
+            />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"></RadioButton>
+            android:layout_margin="10dp" />
 
 
     </RelativeLayout>
@@ -114,7 +80,7 @@
         android:textSize="14sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="25dp"></TextView>
+        android:layout_marginLeft="25dp" />
 
     <LinearLayout
 
@@ -145,7 +111,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_alignParentLeft="true"
 
-                ></ImageView>
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -160,7 +126,7 @@
                 android:textSize="14sp"
 
 
-                ></TextView>
+                />
 
             <ImageView
                 android:layout_width="11dp"
@@ -168,7 +134,7 @@
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/arrow_icon"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"></ImageView>
+                android:layout_marginTop="20dp" />
 
 
         </RelativeLayout>
@@ -190,7 +156,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_alignParentLeft="true"
 
-                ></ImageView>
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -205,7 +171,7 @@
                 android:textSize="14sp"
 
 
-                ></TextView>
+                />
 
             <ImageView
                 android:layout_width="11dp"
@@ -213,7 +179,7 @@
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/arrow_icon"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"></ImageView>
+                android:layout_marginTop="20dp" />
 
 
         </RelativeLayout>
@@ -229,7 +195,7 @@
         android:text="Payment Option"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="25dp"></TextView>
+        android:layout_marginLeft="25dp" />
 
 
     <RelativeLayout
@@ -251,7 +217,7 @@
             android:layout_marginLeft="30dp"
             android:layout_alignParentLeft="true"
 
-            ></ImageView>
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -266,7 +232,7 @@
             android:textSize="14sp"
 
 
-            ></TextView>
+            />
 
         <ImageView
             android:layout_width="11dp"
@@ -274,7 +240,7 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/arrow_icon"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"></ImageView>
+            android:layout_marginTop="20dp" />
 
 
     </RelativeLayout>
@@ -297,7 +263,7 @@
             android:layout_marginLeft="30dp"
             android:layout_alignParentLeft="true"
 
-            ></ImageView>
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -312,7 +278,7 @@
             android:textSize="14sp"
 
 
-            ></TextView>
+            />
 
         <ImageView
             android:layout_width="11dp"
@@ -320,7 +286,7 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/arrow_icon"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"></ImageView>
+            android:layout_marginTop="20dp" />
 
 
     </RelativeLayout>
@@ -343,7 +309,7 @@
             android:layout_marginLeft="30dp"
             android:layout_alignParentLeft="true"
 
-            ></ImageView>
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -358,7 +324,7 @@
             android:textSize="14sp"
 
 
-            ></TextView>
+            />
 
         <ImageView
             android:layout_width="11dp"
@@ -366,7 +332,7 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/arrow_icon"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"></ImageView>
+            android:layout_marginTop="20dp" />
 
 
     </RelativeLayout>
@@ -377,7 +343,7 @@
         android:layout_height="wrap_content"
 
 
-        android:padding="10dp"
+        android:padding="8dp"
 
 
         >
@@ -386,13 +352,13 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/button_box_redback"
-
+            android:id="@+id/pay_now"
             android:textColor="@color/white"
             android:fontFamily="@font/mont_med"
             android:textSize="16sp"
             android:layout_alignParentBottom="true"
             android:textAllCaps="false"
-            android:text="Pay"></Button>
+            android:text="Pay" />
 
 
     </RelativeLayout>

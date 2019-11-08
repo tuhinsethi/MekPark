@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/home_background">
 
-    <RelativeLayout
+
+<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Activities.LoginActivity"
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
         android:background="@color/home_background"
-    >
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_margin="16dp"
-            android:src="@drawable/three_dots"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" />
+    tools:context=".Activities.LoginActivity">
 
 
-        <ImageView
+    <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleX="2"
             android:scaleY="2.5"
-            android:src="@drawable/asset_2hdpi" />
+        android:src="@drawable/asset_2hdpi"
+        android:id="@+id/watermark" />
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
 
 
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+            android:id="@+id/tag">
+
+            <LinearLayout
+
+                android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+
+                >
 
 
 
         <TextView
-            android:layout_marginTop="1dp"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Better Service "
@@ -70,140 +73,162 @@
             android:fontFamily="@font/gotham_book"
             android:text="Lorem Ipsum is simply dummy text of typesetting and printing industry"/>
 
+            </LinearLayout>
+        </FrameLayout>
 
-        <LinearLayout
-            android:layout_marginTop="70dp"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:background="@color/home_background"
-
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Account"
-                android:layout_marginTop="2dp"
-                android:textSize="20sp"
-                android:fontFamily="@font/gotham_med"
-                android:textColor="@color/black"/>
-            <TextView android:layout_marginTop="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:textColor="@color/dark_grey_button"
-                android:fontFamily="@font/mont_med"
-                android:text="Login to enjoy hassle free and full access of our services" />
-
-            <Button
+            android:layout_height="0dp"
+            android:layout_weight="2"
 
 
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Login"
-                android:id="@+id/login"
-                android:fontFamily="@font/mont_med"
-                android:textAllCaps="false"
-                android:background="@drawable/button_bg"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="@color/red_button" />
+            android:layout_margin="16dp"
+            android:id="@+id/mid">
 
             <LinearLayout
-                android:layout_marginTop="30dp"
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@color/home_background"
-                android:id="@+id/faq">
+                android:layout_gravity="center"
 
-                <ImageView
-                    android:src="@drawable/question_icon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    />
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:textColor="@color/black2"
-                    android:textSize="14sp"
-                    android:text="FAQs"
-                    android:fontFamily="@font/mont_semibold"
-                    android:layout_marginLeft="16dp"
-                    android:layout_height="20dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="5" />
-                <ImageView
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/arrow_icon"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:layout_marginTop="2dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/gotham_med"
+                    android:textColor="@color/black"/>
+
+                <TextView android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_grey_button"
+                    android:fontFamily="@font/mont_med"
+                    android:text="Login to enjoy hassle free and full access of our services" />
+
+                <Button
 
 
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Login"
+                    android:id="@+id/login"
+                    android:fontFamily="@font/mont_med"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_bg"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/red_button" />
             </LinearLayout>
+        </FrameLayout>
 
-            <View
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
 
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_height="1dp"
-                android:background="#c1cdc1"
-                android:layout_width="match_parent">
-
-
-            </View>
-
+            android:layout_margin="16dp">
 
             <LinearLayout
-
-
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"
-                android:id="@+id/feedback">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="end"
+                android:id="@+id/bottom"
 
-                <ImageView
-                    android:src="@drawable/message_icon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    />
 
-                <TextView
-                    android:layout_width="0dp"
+                >
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:layout_weight="5"
-                    android:textColor="@color/black2"
-                    android:text="Send feedback"
-                    android:fontFamily="@font/mont_semibold"
-                    android:layout_marginStart="16dp" />
+                    android:orientation="horizontal"
+                    android:background="@color/home_background"
+                    android:id="@+id/faq">
 
-                <ImageView
-                    android:src="@drawable/arrow_icon"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="0dp"
-                    android:layout_height="10dp"
-                    android:layout_weight="1"
-                    />
+                    <ImageView
+                        android:src="@drawable/question_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:textColor="@color/black2"
+                        android:textSize="14sp"
+                        android:text="FAQs"
+                        android:fontFamily="@font/mont_semibold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_height="20dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="5" />
+
+                    <ImageView
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrow_icon"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp" />
 
 
+                </LinearLayout>
+
+                <View
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_height="1dp"
+                    android:background="#c1cdc1"
+                    android:layout_width="match_parent">
+
+
+                </View>
+
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:id="@+id/feedback">
+
+                    <ImageView
+                        android:src="@drawable/message_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="5"
+                        android:textColor="@color/black2"
+                        android:text="Send feedback"
+                        android:fontFamily="@font/mont_semibold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:src="@drawable/arrow_icon"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
+        </FrameLayout>
 
     </LinearLayout>
 
 
 </RelativeLayout>
-</ScrollView>
+
