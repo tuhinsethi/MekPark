@@ -184,7 +184,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/part2"
         android:layout_below="@id/part1"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="60dp">
 
         <TextView
             android:layout_marginLeft="5dp"

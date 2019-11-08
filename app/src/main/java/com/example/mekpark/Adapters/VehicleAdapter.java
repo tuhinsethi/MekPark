@@ -12,12 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mekpark.R;
 
+import java.util.ArrayList;
+
 public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.programmingViewHolder> {
 
      private Context context;
     private String[] data;
-    private int [] Imageid;
-    public VehicleAdapter(String [] data, int[] Imageid){
+    private ArrayList<Integer> Imageid;
+    public VehicleAdapter(String [] data, ArrayList<Integer> Imageid){
 
         this.Imageid=Imageid;
         this.data=data;
@@ -30,6 +32,7 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.programm
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view= inflater.inflate(R.layout.list_items_layout,parent,false);
 
+
         return new programmingViewHolder(view);
     }
 
@@ -40,8 +43,8 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.programm
         String Vehicle= data[position];
         holder.VehicleName.setText(Vehicle);
 
-        int img= Imageid[position];
-        holder.ImgVehicle.setId(img);
+        int img= Imageid.get(position);
+        holder.ImgVehicle.setBackgroundResource(img);
 
 
 

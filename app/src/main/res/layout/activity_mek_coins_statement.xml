@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MekCoinsStatement">
+
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/coin_mdpi"
+        android:layout_margin="20dp"></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/mont_bold"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Current Coins"></TextView>
+        <TextView
+
+            android:paddingTop="3dp"
+            android:textSize="24sp"
+            android:layout_marginRight="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/red_button"
+            ></TextView>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/grey_white"
+        android:text="Value of 1 coin = 1"></TextView>
+
+    <View
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/chart_light_grey"
+        ></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:fontFamily="@font/mont_semibold"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:text="History"></TextView>
+
+
+
+
+</LinearLayout>

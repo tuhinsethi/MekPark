@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Activities.StopParkingActivity"></activity>
+        <activity android:name=".MekCoinsStatement"></activity>
+        <activity android:name=".Activities.StopParkingActivity" />
         <activity
             android:name=".Activities.LocationHistActivity"
             android:label="Location History"
@@ -27,8 +28,8 @@
         </activity>
         <activity
             android:name=".Activities.CheckoutActivity"
-            android:theme="@style/AppTheme"
-            android:label="Checkout" />
+            android:label="Checkout"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.OpenActivity"
             android:label=""

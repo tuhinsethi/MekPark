@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import com.example.mekpark.Adapters.VehicleAdapter;
 
+import java.util.ArrayList;
+
 public class MyVehicles extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,11 @@ public class MyVehicles extends AppCompatActivity {
         VehicleList.setLayoutManager(new LinearLayoutManager(this));
 
         String []Carnames= {"Wagon R","Bajaj Pulsor","Hundai i20","KTM Duke"};
-        int []Imageid={R.drawable.wagonr,R.drawable.pulsor,R.drawable.i20,R.drawable.duke};
+        ArrayList<Integer> Imageid= new ArrayList<Integer>();
+        Imageid.add(R.drawable.wagonr);
+        Imageid.add(R.drawable.pulsor);Imageid.add(R.drawable.i20);
+        Imageid.add(R.drawable.duke);
+
         VehicleList.setAdapter(new VehicleAdapter(Carnames,Imageid));
 
     }
