@@ -59,6 +59,12 @@
         android:textSize="16sp"
         android:text="History"></TextView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerHistory"></androidx.recyclerview.widget.RecyclerView>
+
+
 
 
 
