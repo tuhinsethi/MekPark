@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mekpark.MekCoinsStatement;
 import com.example.mekpark.MyVehicles;
 import com.example.mekpark.handsfreeAccess;
 import com.example.mekpark.R;
@@ -32,7 +33,7 @@ public class LauncherActivity extends AppCompatActivity {
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LauncherActivity.this, FeedbackActivity.class));
+                startActivity(new Intent(LauncherActivity.this, MekCoinsStatement.class));
             }
         });
         login = findViewById(R.id.login);

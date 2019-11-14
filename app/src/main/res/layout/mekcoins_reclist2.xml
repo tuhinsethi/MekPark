@@ -7,9 +7,13 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageAddDeduce"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:src="@drawable/coin_added"
         ></ImageView>
     <LinearLayout
 
@@ -19,6 +23,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/MoneyaddDed"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Money Added"
